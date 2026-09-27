@@ -6,7 +6,7 @@ A responsive, static portfolio site built with HTML and CSS. It has no build ste
 
 - `/` — home and selected-work links
 - `/about/` — short biography and working approach
-- `/work/nsc3/`, `/work/locust-swarm/`, `/work/patria/`, `/work/saucesoft/` — individual case studies
+- `/nsc3/`, `/locust-swarm/`, `/usability-toolset/`, `/bi-reporting/` — individual case studies
 
 ## Publish with GitHub Pages
 
