@@ -1,19 +1,18 @@
-# Pietari Pakarinen — portfolio
+# Pietari Pakarinen — UX designer
 
-A responsive, static portfolio site built with HTML and CSS. It has no build step or JavaScript dependency.
+I design mission-critical software, combining mixed-methods UX research and hands-on software engineering to shape user-centered digital products.
 
-## Pages
+**[Explore the portfolio](https://pietarip.github.io/portfolio/)** · [About me](https://pietarip.github.io/portfolio/about/) · [LinkedIn](https://www.linkedin.com/in/pietari-pakarinen/)
 
-- `/` — home and selected-work links
-- `/about/` — short biography and working approach
-- `/nsc3/`, `/locust-swarm/`, `/usability-toolset/`, `/bi-reporting/` — individual case studies
+## Selected work
 
-## Publish with GitHub Pages
+- **[NSC3](https://pietarip.github.io/portfolio/nsc3/)** — Product design for a critical-communications platform supporting situational awareness and coordination across control-room and field teams.
+- **[Locust Swarm](https://pietarip.github.io/portfolio/locust-swarm/)** — C2 design for planning and managing autonomous UAV missions, from discovery through productization.
+- **[Usability scoring toolset](https://pietarip.github.io/portfolio/usability-toolset/)** — UX research at Patria, developing a lightweight evaluation method for software rationalization and procurement.
+- **[Screenful](https://pietarip.github.io/portfolio/bi-reporting/)** — UX design and Vue.js implementation of an inline editing experience for BI reports.
 
-The workflow in `.github/workflows/pages.yml` deploys the repository root when a commit reaches `main`. In the repository’s **Settings → Pages**, choose **GitHub Actions** as the build and deployment source. The workflow then publishes the static files and reports the site URL in its run summary.
+The case studies describe the context, my contribution, and the work behind each project.
 
-The repository name is `portfolio`, so the default project-site URL is `https://pietarip.github.io/portfolio/`. A custom domain can be configured later in Pages settings.
+## About this repository
 
-## Design source
-
-The homepage follows the desktop direction in the Figma file, with a two-column project grid that collapses to one column on narrow screens. Copy and case-study detail stay at a public-safe level; unreleased NSC3 features and specific operational scenarios are intentionally omitted pending approval for publication.
+This repository contains the source for the portfolio site: a static HTML and CSS site published with GitHub Pages.
