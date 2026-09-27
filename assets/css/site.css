@@ -21,6 +21,7 @@ a { color: inherit; }
 a:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 
 .site-header, .page-header { padding: 0 var(--page-gutter); }
+.has-case-nav .page-header { width: min(100% - (2 * var(--page-gutter)), 48rem); margin: 0 auto; padding: 0; }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.1rem 0 1.5rem; }
 .wordmark, .nav-link { display: inline-flex; align-items: center; min-height: 2.5rem; padding: .35rem 0; text-decoration: none; font-size: clamp(.95rem, 1.7vw, 1.2rem); }
 .wordmark { font-weight: 700; letter-spacing: -.035em; }
@@ -56,7 +57,7 @@ a:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 .project-label span:last-child { color: var(--muted); }
 
 .editorial, .case-study { width: min(100% - (2 * var(--page-gutter)), 65rem); margin: clamp(2rem, 6vw, 5rem) auto clamp(4rem, 8vw, 7rem); }
-.case-study { margin-top: clamp(1rem, 2vw, 1.5rem); }
+.case-study { width: min(100% - (2 * var(--page-gutter)), 48rem); margin-top: clamp(1rem, 2vw, 1.5rem); }
 .about-layout { display: block; }
 .editorial h1, .case-study h1 { margin: 0 0 1.5rem; font-size: clamp(2.5rem, 6.4vw, 5.5rem); font-weight: 500; line-height: 1.08; letter-spacing: -.065em; }
 .editorial p:not(.eyebrow), .case-section p { font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.8; }
@@ -68,8 +69,8 @@ a:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 .about-note ul { padding-left: 1.2rem; margin: 1rem 0 0; }
 .about-note li { padding: .45rem 0; line-height: 1.5; }
 
-.case-study > .lead { margin: 0 0 2rem; }
-.case-section { max-width: 48rem; margin: 0 0 3rem; }
+.case-study > .lead { margin: 0 auto 2rem; }
+.case-section { max-width: 48rem; margin: 0 auto 3rem; }
 .case-section h2 { margin: 0 0 .6rem; font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 500; letter-spacing: -.04em; }
 .case-section p { margin: .5rem 0 1.2rem; }
 .case-figure { width: min(100%, 48rem); margin: 2rem auto; }
@@ -102,7 +103,7 @@ a:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 .linkedin-link span { font-size: 1.7rem; font-weight: 700; letter-spacing: -.1em; }
 .copyright { padding: 1rem var(--page-gutter); border-top: 1px solid #eee; font-size: .7rem; }
 
-@media (min-width: 1500px) { .site-header, .page-header, .work-section, .site-footer, .copyright { padding-right: max(var(--page-gutter), calc((100vw - 1440px) / 2)); padding-left: max(var(--page-gutter), calc((100vw - 1440px) / 2)); } }
+@media (min-width: 1500px) { .site-header, .work-section, .site-footer, .copyright { padding-right: max(var(--page-gutter), calc((100vw - 1440px) / 2)); padding-left: max(var(--page-gutter), calc((100vw - 1440px) / 2)); } }
 @media (max-width: 760px) {
   .hero { position: relative; display: grid; min-height: 0; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; padding-bottom: 2.5rem; }
   .hero-intro { position: relative; z-index: 1; grid-column: 1; grid-row: 1; align-self: end; width: 100%; padding: clamp(1.25rem, 4vw, 2rem); font-size: clamp(1.35rem, 3.5vw, 1.65rem); line-height: 1.4; }
