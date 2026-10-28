@@ -16,3 +16,5 @@ The case studies describe the context, my contribution, and the work behind each
 ## About this repository
 
 This repository contains the source for the portfolio site: a static HTML and CSS site published with GitHub Pages.
+
+For local validation, run `python tools/prepare_public_site.py`. To prepare a deployment artifact, add `--output public-site` (the destination must not already exist). This copies only the six public pages and their referenced assets, checks local links and section targets, and excludes working files and old PDF exports. The GitHub Pages workflow uploads this prepared folder.

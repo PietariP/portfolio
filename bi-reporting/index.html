@@ -2,35 +2,84 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SauceSoft — UX design and development for a business intelligence reporting tool.">
-    <title>BI reporting tool redesign — Pietari Pakarinen</title><link rel="stylesheet" href="../assets/css/site.css">
+    <meta name="description" content="UX evaluation, inline report-editing design and Vue.js implementation for Screenful through SauceSoft.">
+    <title>Screenful — Pietari Pakarinen</title><link rel="stylesheet" href="../assets/css/site.css?v=20261028-13">
+    <script src="../assets/js/image-viewer.js?v=20261028-3" defer></script>
+    <link rel="canonical" href="https://pietarip.github.io/portfolio/bi-reporting/">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pietari Pakarinen — Portfolio">
+    <meta property="og:title" content="Screenful — Pietari Pakarinen">
+    <meta property="og:description" content="UX evaluation, inline report-editing design and Vue.js implementation for Screenful through SauceSoft.">
+    <meta property="og:url" content="https://pietarip.github.io/portfolio/bi-reporting/">
+    <meta property="og:image" content="https://pietarip.github.io/portfolio/assets/images/social-preview.jpg">
+    <meta property="og:image:width" content="1240">
+    <meta property="og:image:height" content="827">
+    <meta property="og:image:alt" content="Locust Swarm displayed during a field demonstration">
+    <meta name="twitter:card" content="summary_large_image">
   </head>
-  <body class="has-case-nav">
-    <header class="page-header"><nav class="nav" aria-label="Main navigation"><a class="wordmark" href="../">Pietari Pakarinen</a><a class="nav-link" href="../about/">About</a></nav></header>
-    <main class="case-study">
-      <div class="case-brand"><img class="case-brand-logo" src="../assets/images/saucesoft.png" alt="SauceSoft"><p class="eyebrow">UX Design and Development</p></div><h1>BI reporting tool redesign</h1>
-      <section class="case-section"><h2>Context</h2>
-        <p>SauceSoft partnered with Screenful, a SaaS company providing business intelligence dashboards and progress reporting tools. Their product was powerful, meeting all functional requirements, but users found it difficult and frustrating to manage the reports.</p>
+  <body class="has-case-nav revised-case">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="page-header"><nav class="nav" aria-label="Main navigation">
+        <a class="wordmark" href="../">Pietari Pakarinen</a>
+        <div class="nav-links"><a class="nav-link" href="../#work">Work</a><a class="nav-link" href="../about/">About</a></div>
+      </nav></header>
+    <main id="main" tabindex="-1" class="case-study case-study--revised">
+      <header class="case-opening">
+        <p class="eyebrow">SauceSoft / Screenful · UX design and development</p>
+        <h1>Screenful</h1>
+        <p class="case-deck">Designing and building inline report editing.</p>
+        <p class="case-meta"><span>UX designer and software developer</span><span>June–August 2022</span></p>
+        <nav class="case-contents" aria-label="Case study sections"><a href="#context">Context</a><a href="#problem">Problem</a><a href="#process">Process</a><a href="#solution">Solution</a><a href="#impact">Impact</a></nav>
+      </header>
+      <section id="context" class="case-section"><h2>Context</h2>
+        <div class="section-body">
+          <p>Screenful provides business intelligence dashboards and progress reports. I worked on the product through SauceSoft, helping improve how users manage report content.</p>
+          <p>My role covered <strong>UX evaluation, interaction design and frontend implementation</strong>. I designed an inline-editing mode and then joined the development team to build it in Vue.js, iterating with Screenful throughout the engagement.</p>
+          <figure class="case-figure report-preview"><img src="../assets/images/saucesoft-solution.webp" alt="Screenful weekly report containing headings, text and task-progress charts" width="1240" height="2309" loading="lazy"><figcaption>Report excerpt showing the content being edited. Enlarge to view the complete report. Product image: <a href="https://screenful.com/" target="_blank" rel="noreferrer">Screenful</a>.</figcaption></figure>
+        </div>
       </section>
-      <section class="case-section"><h2>Problem</h2>
-        <p>During an initial demonstration and subsequent usability evaluation, we found that while on the effectiveness front, the product was great and the users could achieve their goals accurately, doing so required excessive effort. Managing report content involved navigating through a complex web of subpages, which caused high cognitive load as well as reduced overall efficiency and satisfaction.</p>
-        <figure class="case-figure"><img src="../assets/images/saucesoft-problem.png" alt="Screenful chart settings page showing the report configuration interface"><figcaption>Product image from <a href="https://screenful.com/" target="_blank" rel="noreferrer">Screenful</a>.</figcaption></figure>
+      <section id="problem" class="case-section"><h2>Problem</h2>
+        <div class="section-body">
+          <p class="section-takeaway">Editing a report meant leaving the report.</p>
+          <p>An initial demonstration and usability evaluation exposed a navigation problem. Users could accomplish their tasks, but managing report content required moving through a complex set of subpages.</p>
+          <p>The design challenge was to bring editing closer to the content, so users could make changes in the context of the report they were preparing.</p>
+          <details class="evidence-details"><summary>View the separate chart-settings interface</summary>
+            <figure class="case-figure"><img src="../assets/images/saucesoft-problem.webp" alt="Separate Screenful chart-settings page with fields for chart name, rolling window and display names" width="1240" height="781" loading="lazy"><figcaption>The separate configuration interface illustrates the navigation context. Product image: <a href="https://screenful.com/" target="_blank" rel="noreferrer">Screenful</a>.</figcaption></figure>
+          </details>
+        </div>
       </section>
-      <section class="case-section"><h2>Process</h2>
-        <p>After presenting our findings to Screenful, we collaborated through design workshops to explore potential solutions. One key insight emerged: the need to eliminate unnecessary navigation. What if users could manage everything directly within the report itself?</p>
-        <p>I translated this concept into UI designs for a new inline editing mode, allowing users to modify reports without leaving the main view. Early feedback showed this approach to be far more intuitive and efficient.</p>
-        <figure class="case-figure"><img src="../assets/images/saucesoft-solution.png" alt="Redesigned weekly report with editable dashboard charts"><figcaption>Product image from <a href="https://screenful.com/" target="_blank" rel="noreferrer">Screenful</a>.</figcaption></figure>
+      <section id="process" class="case-section"><h2>Process</h2>
+        <div class="section-body">
+          <p>We presented the evaluation findings to Screenful and explored alternatives together in design workshops. The direction was to reduce unnecessary navigation by letting users manage content directly within the report.</p>
+          <aside class="design-decision" aria-label="A design decision"><p class="decision-label">One decision in detail</p><p>I translated that direction into <strong>an inline-editing mode</strong>: keeping changes in the report’s context instead of making separate configuration pages the centre of the editing workflow.</p></aside>
+          <p>I developed the interface designs and refined them with the client. Once we agreed on the direction, I moved into implementation, continuing to adjust both the designs and the code through weekly feedback meetings.</p>
+        </div>
       </section>
-      <section class="case-section"><h2>Solution</h2>
-        <p>Once the design direction was validated, we moved into implementation. I joined the development team as well, as there were only occasional changes to be made in the designs at this point. Working within the development team, I built the editing mode in Vue.js, bridging the gap between design and engineering. I actually learned Vue for this project specifically, which was simple enough from a React.js background.</p>
-        <p>We iterated continuously, refining both design and code based on client feedback in weekly meetings.</p>
+      <section id="solution" class="case-section"><h2>Solution</h2>
+        <div class="section-body">
+          <p class="section-takeaway">Keep the content and the editing together.</p>
+          <figure class="case-figure case-figure--screen"><img src="../assets/images/screenful-inline-design.webp" alt="Screenful Figma design showing text insertion and deletion actions beside a text block, and chart settings, replacement and deletion actions beside a chart" width="1000" height="510" loading="lazy"><figcaption>Figma design example showing text and chart actions in the report. Several menu states are shown together.</figcaption></figure>
+          <p>Text and chart actions sit beside the content they affect. The report remains visible as the context for editing, rather than becoming a separate destination users must return to.</p>
+          <p>I <strong>implemented the editing mode in Vue.js</strong>, learning the framework for the project from a React background. Moving from the designs into the code let me carry the interaction decisions through implementation and respond directly to client feedback.</p>
+        </div>
       </section>
-      <section class="case-section"><h2>Impact</h2>
-        <p>The new editing mode significantly reduced user effort and improved satisfaction, as reflected in the client’s feedback.</p>
-        <figure class="case-figure"><img src="../assets/images/saucesoft-endorsement.png" alt="Screenful CEO Sami Linnanvuo endorses SauceSoft’s work improving the product’s user experience"><figcaption>Client recommendation from <a href="https://www.saucesoft.io/fi" target="_blank" rel="noreferrer">SauceSoft</a>.</figcaption></figure>
+      <section id="impact" class="case-section"><h2>Impact</h2>
+        <div class="section-body">
+          <p class="section-takeaway">From evaluation findings to a working editing mode.</p>
+          <p>I delivered the inline-editing designs and their Vue implementation as part of the SauceSoft team. The engagement connected evaluation, collaborative design and development within the same project.</p>
+          <p>Screenful’s client recommendation recognised the team’s work on complex functionality and user experience:</p>
+          <figure class="research-endorsement"><blockquote><p>“Implementing complex functionality while retaining a great UX is not an easy task to do, but that’s what SauceSoft guys did.”</p></blockquote><figcaption>Sami Linnanvuo · Screenful CEO &amp; Co-Founder<br>Recommendation for the SauceSoft team · <a href="https://www.saucesoft.io/fi" target="_blank" rel="noreferrer">SauceSoft</a></figcaption></figure>
+        </div>
       </section>
     </main>
-    <nav class="case-pagination" aria-label="Other case studies"><a href="../usability-toolset/" aria-label="Newer project: Patria — Usability scoring toolset"><span class="pagination-arrow" aria-hidden="true">←</span><span class="pagination-copy"><span class="pagination-label">Newer project</span><span class="pagination-destination">Patria · Usability scoring toolset</span></span></a><a href="../#work" aria-label="All projects"><span class="pagination-copy"><span class="pagination-label">All projects</span><span class="pagination-destination">Selected work</span></span><span class="pagination-arrow" aria-hidden="true">→</span></a></nav>
-    <footer class="site-footer"><p>Let’s work together</p><a class="linkedin-link" href="https://www.linkedin.com/in/pietari-pakarinen/" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.35H4.96V9.5h2.97v8.85ZM6.45 8.29c-.96 0-1.73-.78-1.73-1.73s.77-1.73 1.73-1.73 1.73.78 1.73 1.73-.77 1.73-1.73 1.73Zm11.9 10.06h-2.96v-4.3c0-1.03-.02-2.35-1.43-2.35-1.44 0-1.66 1.12-1.66 2.28v4.37H9.34V9.5h2.84v1.21h.04c.4-.7 1.36-1.43 2.8-1.43 3 0 3.56 1.97 3.56 4.53v4.54Z"/></svg></a></footer><div class="copyright">Pietari Pakarinen · 2026 · All rights reserved</div>
+    <nav class="case-pagination" aria-label="Other case studies"><a href="../usability-toolset/" aria-label="Previous project: Usability scoring toolset"><span class="pagination-arrow" aria-hidden="true">←</span><span class="pagination-copy"><span class="pagination-label">Previous project</span><span class="pagination-destination">Usability scoring toolset</span></span></a><a href="../#work" aria-label="All projects"><span class="pagination-copy"><span class="pagination-label">All projects</span><span class="pagination-destination">Selected work</span></span><span class="pagination-arrow" aria-hidden="true">→</span></a></nav>
+    <footer class="site-footer">
+      <p>Let’s work together</p>
+      <a class="contact-link" href="https://www.linkedin.com/in/pietari-pakarinen/">Connect on LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.35H4.96V9.5h2.97v8.85ZM6.45 8.29c-.96 0-1.73-.78-1.73-1.73s.77-1.73 1.73-1.73 1.73.78 1.73 1.73-.77 1.73-1.73 1.73Zm11.9 10.06h-2.96v-4.3c0-1.03-.02-2.35-1.43-2.35-1.44 0-1.66 1.12-1.66 2.28v4.37H9.34V9.5h2.84v1.21h.04c.4-.7 1.36-1.43 2.8-1.43 3 0 3.56 1.97 3.56 4.53v4.54Z"/></svg></a>
+    </footer><div class="copyright">Pietari Pakarinen · 2026 · All rights reserved</div>
   </body>
 </html>

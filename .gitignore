@@ -1,1 +1,5 @@
 .agents/skills/portfolio-git-push/
+public-site/
+tmp/
+output/
+__pycache__/

@@ -2,36 +2,84 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Modirum Gespi — Locust Swarm product design case study.">
-    <title>Locust Swarm — Pietari Pakarinen</title><link rel="stylesheet" href="../assets/css/site.css">
+    <meta name="description" content="Designing Locust Swarm from discovery through productization: mission workflows, field-informed interaction design and building a design function.">
+    <title>Locust Swarm — Pietari Pakarinen</title><link rel="stylesheet" href="../assets/css/site.css?v=20261028-13">
+    <script src="../assets/js/image-viewer.js?v=20261028-3" defer></script>
+    <link rel="canonical" href="https://pietarip.github.io/portfolio/locust-swarm/">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pietari Pakarinen — Portfolio">
+    <meta property="og:title" content="Locust Swarm — Pietari Pakarinen">
+    <meta property="og:description" content="Designing Locust Swarm from discovery through productization: mission workflows, field-informed interaction design and building a design function.">
+    <meta property="og:url" content="https://pietarip.github.io/portfolio/locust-swarm/">
+    <meta property="og:image" content="https://pietarip.github.io/portfolio/assets/images/social-preview.jpg">
+    <meta property="og:image:width" content="1240">
+    <meta property="og:image:height" content="827">
+    <meta property="og:image:alt" content="Locust Swarm displayed during a field demonstration">
+    <meta name="twitter:card" content="summary_large_image">
   </head>
-  <body class="has-case-nav">
-    <header class="page-header"><nav class="nav" aria-label="Main navigation"><a class="wordmark" href="../">Pietari Pakarinen</a><a class="nav-link" href="../about/">About</a></nav></header>
-    <main class="case-study">
-      <div class="case-brand"><img class="case-brand-logo" src="../assets/images/modirum-gespi.svg" alt="Modirum Gespi"><p class="eyebrow">Product Design</p></div><h1>Locust Swarm</h1>
-      <section class="case-section"><h2>Context</h2>
-        <p>Modirum Gespi’s Tampere office was a small, R&amp;D-oriented team of software developers exploring how large fleets of UAVs could be operated with limited pilot availability. They were in the process of gathering initial requirements and building what they could to get ahead of the competition.</p>
-        <p>The team was keenly aware that good UX would make or break the solution, as the end users would be using the system under high cognitive burden, with little patience for complex software. I joined the company as the first designer to deliver on this, build the design function and a framework for cross-functional collaboration between design and other teams.</p>
+  <body class="has-case-nav revised-case">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="page-header"><nav class="nav" aria-label="Main navigation">
+        <a class="wordmark" href="../">Pietari Pakarinen</a>
+        <div class="nav-links"><a class="nav-link" href="../#work">Work</a><a class="nav-link" href="../about/">About</a></div>
+      </nav></header>
+    <main id="main" tabindex="-1" class="case-study case-study--revised">
+      <header class="case-opening">
+        <p class="eyebrow">Modirum Gespi · Autonomous UAV operations</p>
+        <h1>Locust Swarm</h1>
+        <p class="case-deck">Designing a product and building its design practice.</p>
+        <p class="case-meta"><span>UX designer · First designer on the product</span><span>June 2024–December 2025</span></p>
+        <nav class="case-contents" aria-label="Case study sections"><a href="#context">Context</a><a href="#problem">Problem</a><a href="#process">Process</a><a href="#solution">Solution</a><a href="#impact">Impact</a></nav>
+      </header>
+      <section id="context" class="case-section"><h2>Context</h2>
+        <div class="section-body">
+          <p>Locust Swarm is a command-and-control product for coordinating autonomous UAV missions. Modirum Gespi’s small R&amp;D team in Tampere was exploring how a single operator could manage a fleet while retaining situational awareness and the ability to intervene.</p>
+          <p>I joined <strong>during discovery, before product development began</strong>, as the first designer. I owned product design from initial needs and mission workflows through productization, while establishing how design and engineering would work together.</p>
+          <figure class="case-figure"><img src="../assets/images/locust-swarm-demonstration.webp" alt="Locust Swarm interface displayed at an outdoor UAV demonstration" width="1240" height="827" loading="lazy"><figcaption>Locust Swarm in the field. I participated in this demonstration as a safety pilot and gathered feedback from the audience afterwards. Image: <a href="https://www.linkedin.com/company/modirumgespi/posts/?feedView=all" target="_blank" rel="noreferrer">Modirum Gespi on LinkedIn</a>.</figcaption></figure>
+        </div>
       </section>
-      <section class="case-section"><h2>Problem</h2>
-        <p>Defence forces want to coordinate fleets of UAVs strategically and UAVs can be procured en masse for this purpose, but pilots cannot. Translating these kinds of needs into a simple, usable software solution that could be utilized in high-stakes operational use was the core design challenge. In parallel to solving this, I was building a design team and a design process.</p>
+      <section id="problem" class="case-section"><h2>Problem</h2>
+        <div class="section-body">
+          <p class="section-takeaway">More aircraft cannot mean more work for every operator.</p>
+          <p>UAV fleets can grow faster than the supply of trained pilots. The design challenge was to turn complex requirements into workflows that one operator could use under high cognitive load: planning a mission, following its progress, recognising when intervention was needed and taking action.</p>
+          <p>Alongside the interface, the team needed a design practice that could keep pace with development. Requirements, interaction decisions and reusable components had to become part of the engineering workflow.</p>
+        </div>
       </section>
-      <section class="case-section"><h2>Process</h2>
-        <p>I dug into the requirements, the research it was based on and the military domain. I began the design work by defining the core mission planning flow, designing and delivering UI components incrementally in Figma for implementation. I collaborated closely with developers, integrating their feedback into the designs to ensure feasibility and performance.</p>
-        <p>As the product matured, I recruited and onboarded another designer, which allowed us to get ahead of development, build a design system, and reduce design debt. AI was being heavily utilized by development, and design also has had an opportunity to learn to utilize tools like Figma Make for speeding up the design process.</p>
-        <p>I participated in field testing and demonstrations around the world for military clients, learning to operate UAVs as a safety pilot to better understand end-user needs. I translated the end-user feedback directly from operators and engineers in the field into actionable improvements to the design of the final product.</p>
-        <figure class="case-figure"><img src="../assets/images/locust-swarm-demonstration.png" alt="Locust Swarm displayed during a military product demonstration"><figcaption>Image from <a href="https://www.linkedin.com/company/modirumgespi/posts/?feedView=all" target="_blank" rel="noreferrer">Modirum Gespi on LinkedIn</a>.</figcaption></figure>
+      <section id="process" class="case-section"><h2>Process</h2>
+        <div class="section-body">
+          <p>I studied the requirements and their underlying research, followed industry developments, researched competing solutions and learned from senior domain experts on the team. This informed the <strong>core mission-planning flow</strong> I defined. I delivered Figma designs and components incrementally, working through feasibility and performance constraints with developers as they implemented the product.</p>
+          <p>As the work expanded, I <strong>recruited and onboarded another designer</strong>. Together we built the design system, addressed design debt and worked to get designs ahead of development. AI was already widely used in engineering; we also explored AI-assisted design, for example using Figma Make to accelerate design exploration.</p>
+          <p>Field testing and international demonstrations brought me closer to operators and engineers using the system. I learned to operate UAVs as a safety pilot and used what I observed in the field to inform interface changes.</p>
+          <aside class="design-decision" aria-label="A design decision"><p class="decision-label">One decision in detail</p><p>I wanted to keep the live mission view uncluttered. Field testing showed that connection and status troubleshooting still needed to happen there. I added <strong>a compact, curated log in the live view</strong>, with access to deeper technical logs outside it.</p></aside>
+        </div>
       </section>
-      <section class="case-section"><h2>Solution</h2>
-        <p>We developed an intuitive, map-based interface for resource management, mission planning and execution. The system supports ISR and strike operations, among others, across UAV swarms controlled by a single operator, while maintaining clear situational awareness and the ability for human intervention at any moment. While I can’t share much, I can share this video of the solution in action:</p>
-        <figure class="case-figure"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/HYUrnVApU2I?rel=0" title="From ISR to Strike | Autonomy in Action - Modirum | Gespi" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Video from <a href="https://www.youtube.com/watch?v=HYUrnVApU2I" target="_blank" rel="noreferrer">Modirum Gespi on YouTube</a>.</figcaption></figure>
+      <section id="solution" class="case-section"><h2>Solution</h2>
+        <div class="section-body">
+          <p class="section-takeaway">Keep the mission in view, with detail within reach.</p>
+          <p>We developed a map-based interface for resource management, mission planning and execution. It brought autonomous fleet operations into a single operator’s workflow, with situational awareness and human intervention central to the design.</p>
+          <figure class="case-figure case-figure--screen"><img src="../assets/images/locust-planning-portfolio.webp" alt="Locust Swarm planning interface with a five-step progress indicator, resource selection panels and a map" width="1920" height="1224" loading="lazy"><figcaption>Reconstructed example of resource selection in the productized 1.0 design, with fictional geography and example labels.</figcaption></figure>
+          <figure class="case-figure case-figure--screen"><img src="../assets/images/locust-live-portfolio.webp" alt="Locust Swarm live interface with summary and event log beside the map, and a timeline below" width="1576" height="1124" loading="lazy"><figcaption>Reconstructed example of the live view in the productized 1.0 design: summary and event log beside the map, with the execution timeline below. Geography and example labels are fictional.</figcaption></figure>
+          <p>The compact log keeps routine status information in view while providing a route to deeper technical logs. It is one example of how field experience shaped the product’s interaction design.</p>
+          <figure class="case-figure"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/HYUrnVApU2I?rel=0" title="Locust Swarm public product demonstration — Modirum Gespi" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Public product demonstration. <a href="https://www.youtube.com/watch?v=HYUrnVApU2I" target="_blank" rel="noreferrer">Watch on YouTube</a>.</figcaption></figure>
+        </div>
       </section>
-      <section class="case-section"><h2>Impact</h2>
-        <p>Locust Swarm evolved from concept to a fully productized product, which was successfully deployed in live UAV demonstrations for international defence clients and has received recognition. For me, the project provided many opportunities for growth, expanding my skillset with project and product management, as the project moved into productization, certification, and formal release preparation.</p>
-        <figure class="case-figure case-figure--recognition"><img src="../assets/images/locust-swarm-recognition.png" alt="Modirum Gespi Top AI Powered Defense Solution in Latin America 2025 award"><figcaption>Award feature in <a href="https://www.aerospacedefensereview.com/modirum-gespi" target="_blank" rel="noreferrer">Aerospace &amp; Defense Review</a>; see also <a href="https://modirumgespi.com/en/news/modirum-gespi-named-top-ai-powered-defense-solution-latin-america" target="_blank" rel="noreferrer">Modirum Gespi’s announcement</a>.</figcaption></figure>
+      <section id="impact" class="case-section"><h2>Impact</h2>
+        <div class="section-body">
+          <p class="section-takeaway">From discovery to live demonstrations and release preparation.</p>
+          <p>I helped take Locust Swarm from early requirements into a working product demonstrated to international defence audiences. Alongside product design, I established design practices, helped grow the team and took on broader project and product responsibilities as the work moved through productization, certification and formal release preparation.</p>
+          <p>A highlight was a live demonstration after roughly a year of work on the product. We spent a week preparing on site. I served as a safety pilot, and after the successful demonstration gathered feedback from an audience that included generals and ministers. It made the team’s progress tangible: we could show defence representatives what the technology could already do.</p>
+          <p class="recognition-note">Industry recognition: <a href="https://www.aerospacedefensereview.com/modirum-gespi" target="_blank" rel="noreferrer">Aerospace &amp; Defense Review’s feature</a> and <a href="https://modirumgespi.com/en/news/modirum-gespi-named-top-ai-powered-defense-solution-latin-america" target="_blank" rel="noreferrer">Modirum Gespi’s award announcement</a>.</p>
+        </div>
       </section>
     </main>
-    <nav class="case-pagination" aria-label="Other case studies"><a href="../nsc3/" aria-label="Newer project: NSC3"><span class="pagination-arrow" aria-hidden="true">←</span><span class="pagination-copy"><span class="pagination-label">Newer project</span><span class="pagination-destination">Modirum Platforms · NSC3</span></span></a><a href="../usability-toolset/" aria-label="Older project: Patria — Usability scoring toolset"><span class="pagination-copy"><span class="pagination-label">Older project</span><span class="pagination-destination">Patria · Usability scoring toolset</span></span><span class="pagination-arrow" aria-hidden="true">→</span></a></nav>
-    <footer class="site-footer"><p>Let’s work together</p><a class="linkedin-link" href="https://www.linkedin.com/in/pietari-pakarinen/" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.35H4.96V9.5h2.97v8.85ZM6.45 8.29c-.96 0-1.73-.78-1.73-1.73s.77-1.73 1.73-1.73 1.73.78 1.73 1.73-.77 1.73-1.73 1.73Zm11.9 10.06h-2.96v-4.3c0-1.03-.02-2.35-1.43-2.35-1.44 0-1.66 1.12-1.66 2.28v4.37H9.34V9.5h2.84v1.21h.04c.4-.7 1.36-1.43 2.8-1.43 3 0 3.56 1.97 3.56 4.53v4.54Z"/></svg></a></footer><div class="copyright">Pietari Pakarinen · 2026 · All rights reserved</div>
+    <nav class="case-pagination" aria-label="Other case studies"><a href="../#work"><span class="pagination-arrow" aria-hidden="true">←</span><span class="pagination-copy"><span class="pagination-label">All projects</span><span class="pagination-destination">Selected work</span></span></a><a href="../nsc3/"><span class="pagination-copy"><span class="pagination-label">Next project</span><span class="pagination-destination">NSC3</span></span><span class="pagination-arrow" aria-hidden="true">→</span></a></nav>
+    <footer class="site-footer">
+      <p>Let’s work together</p>
+      <a class="contact-link" href="https://www.linkedin.com/in/pietari-pakarinen/">Connect on LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.35H4.96V9.5h2.97v8.85ZM6.45 8.29c-.96 0-1.73-.78-1.73-1.73s.77-1.73 1.73-1.73 1.73.78 1.73 1.73-.77 1.73-1.73 1.73Zm11.9 10.06h-2.96v-4.3c0-1.03-.02-2.35-1.43-2.35-1.44 0-1.66 1.12-1.66 2.28v4.37H9.34V9.5h2.84v1.21h.04c.4-.7 1.36-1.43 2.8-1.43 3 0 3.56 1.97 3.56 4.53v4.54Z"/></svg></a>
+    </footer><div class="copyright">Pietari Pakarinen · 2026 · All rights reserved</div>
   </body>
 </html>
