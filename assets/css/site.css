@@ -156,7 +156,7 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 .text-action { display: inline-flex; align-items: center; gap: .9rem; min-height: 2.75rem; font-size: .95rem; font-weight: 600; text-underline-offset: .3em; text-decoration-thickness: 1px; }
 .text-action span { color: var(--accent); }
 .home-portrait { margin: 0; }
-.home-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 45%; }
+.home-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: 50% 16%; }
 .home-portrait figcaption { margin-top: .75rem; max-width: 27ch; color: var(--muted); font-size: .75rem; line-height: 1.6; }
 .selected-work { width: min(100% - (2 * var(--page-gutter)), var(--site-width)); margin: 0 auto 5rem; }
 #work, .case-section { scroll-margin-top: 1.5rem; }
@@ -292,7 +292,6 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
   .home-intro h1 { max-width: 15ch; font-size: clamp(2.6rem, 7.5vw, 3.6rem); }
   .home-deck { max-width: 45ch; }
   .home-portrait { display: grid; grid-template-columns: 6rem 1fr; align-items: center; gap: 1rem; }
-  .home-portrait img { aspect-ratio: 1; object-position: 50% 35%; }
   .home-portrait figcaption { max-width: 30ch; margin: 0; }
   .work-heading { display: block; }
   .work-heading > p { margin-top: .6rem; }
