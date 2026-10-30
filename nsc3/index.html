@@ -59,7 +59,7 @@
         <h2>Process</h2>
         <div class="section-body">
           <p>For Events, I designed a dedicated log with inspection on the same page. I organised the information around the operator’s questions: <strong>what happened, where, when, how it was detected, what has been done about it and what can be done next.</strong></p>
-          <p>Operators inspect an Event before deciding whether to create a Task or send an Alert. Personal notification criteria let them decide in advance which Events should demand their attention.</p>
+          <p>Operators inspect an Event before deciding whether to create a Task or send a targeted alert. Personal notification criteria let them decide in advance which Events should demand their attention.</p>
           <p>I considered adding Task creation directly to Event inspection. I kept the existing dialog because saving one click didn’t justify changing a pattern operators already used elsewhere in the product.</p>
         </div>
       </section>
@@ -74,10 +74,10 @@
           <ol class="interface-decisions">
             <li><strong>Inspect alongside the event log.</strong> Review a selected Event without losing its context.</li>
             <li><strong>Organise evidence.</strong> Group the detection, supporting media and relevant details for assessment.</li>
-            <li><strong>Continue into action.</strong> Start a Task or Alert from Event inspection.</li>
-            <li><strong>Coordinate the response.</strong> Continue the response through the Task and Alert workflows.</li>
+            <li><strong>Continue into action.</strong> Create a Task or send a targeted alert from Event inspection.</li>
+            <li><strong>Coordinate the response.</strong> Continue the response through the Task and targeted alerting workflows.</li>
           </ol>
-          <p>When an Event calls for a response, the operator can create a Task or send an Alert from the inspection panel. Tasks provide a place to coordinate the work. Alerts reach selected recipients and track their acknowledgements. I refined the requirements and designed the Web and Mobile experiences for this Targeted Alerting workflow, including delivery through SMS and LiveLink.</p>
+          <p>When an Event calls for a response, the operator can create a Task or send a targeted alert from the inspection panel. Tasks provide a place to coordinate the work. Targeted alerts reach selected recipients and track their acknowledgements. I refined the requirements and designed the Web and Mobile experiences for this targeted alerting workflow, including delivery through SMS and LiveLink.</p>
           <h3>Manage competing demands for attention</h3>
           <p>The interface evolved as field reports exposed another problem: <strong>too many Events competing for attention.</strong> I reframed the next phase around personal subscriptions, notifications and better inspection. Subscriptions let Controllers define which Events should notify them; filtering narrows the log they are reviewing. In the inspection image above, the notification bells show which Events match subscriptions, and the “Notified events” filter helps operators focus on those matches. These capabilities were deployed to a later face-recognition POC.</p>
           <details class="evidence-details">
@@ -89,7 +89,8 @@
           </details>
           <section class="prototype-story" id="prototyping" aria-labelledby="prototyping-title">
             <h3 id="prototyping-title">Design and review behaviour in code</h3>
-            <p>I came across <a href="https://www.linkedin.com/pulse/kuka-varmistaa-asiakaskokemuksen-laadun-kun-ai-agentit-3dzlf/">an article by Alpha Design Partners about AI-native design maturity</a> and used its framework to structure an initiative for improving how we design and build with AI. I broke the work into milestones covering the design system, guidance for coding agents and prototyping in code.</p>
+            <p>My first practical pilot of this approach came during preparations for the targeted alerting customer demo. It became clear that the developers wouldn’t have time to implement the recipient-facing LiveLink, which was required for the demo. I volunteered to build it. I directed AI to implement my designs in the product codebase, ran the application locally and checked the behaviour against the requirements. Our Web developer reviewed and corrected the code before merging it, and the feature was included in the customer POC.</p>
+            <p>I later used <a href="https://www.linkedin.com/pulse/kuka-varmistaa-asiakaskokemuksen-laadun-kun-ai-agentit-3dzlf/">Alpha Design Partners’ AI-native design maturity framework</a> to structure the next steps: adapting the design system, adding guidance for coding agents and establishing a dedicated prototyping environment within the development codebase.</p>
             <p>I adapted the existing design system by aligning Figma variables with code tokens and adding guidance for coding agents to the product repository. This gives agents shared rules and components for NSC3 Web development, including prototypes. I also established a prototyping environment within the development codebase, so I could design and review interactions using the product’s actual components.</p>
             <p>I define the requirements in Jira epics and tickets, design the interface in Figma, then direct AI to build an interactive version in the prototyping environment I’ve built into our development environment. There I can work through the states, flows and interactions. Prototypes use fictional data and simulated services.</p>
             <figure class="prototype-workflow" aria-labelledby="prototype-workflow-title">
@@ -119,7 +120,7 @@
         <h2>Impact</h2>
         <div class="section-body">
           <p class="section-takeaway">From ambiguous requests to implemented POC workflows.</p>
-          <p>Developers implemented the Events concept, and it was deployed to partner POCs. Subscriptions, notifications and filtering followed in the later face-recognition POC, while Targeted Alerting was deployed for its own customer exercise.</p>
+          <p>The Events concept was implemented and deployed to partner POCs. Subscriptions, notifications and filtering followed in the later face-recognition POC. For the targeted alerting POC, I also took on AI-assisted implementation of the recipient-facing LiveLink when developer capacity couldn’t cover it in time, with developer review and corrections before delivery.</p>
           <p>Alongside these product capabilities, I established a code-based workflow for design reviews and implementation handoff. The scrum team has used it to review new interactions, and the image-viewer prototype supplied a developer with code to start implementation.</p>
         </div>
       </section>
