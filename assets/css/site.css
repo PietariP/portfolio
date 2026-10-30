@@ -324,7 +324,7 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 
 .interface-decisions { max-width:44rem; padding-left:1.4rem; margin:1.25rem 0 0; }
 .interface-decisions li { margin:.65rem 0; line-height:1.65; }
-.prototype-story { margin-top:3rem; padding-top:2rem; border-top:1px solid #dce2e3; }
+.prototype-story { margin-top:1.5rem; }
 .prototype-story h3 { font-size:clamp(1.5rem,3vw,2rem); line-height:1.2; letter-spacing:-.035em; margin:0 0 1.25rem; }
 .prototype-story > p { font-size:1.05rem; line-height:1.75; max-width:44rem; }
 .prototype-workflow { margin:1.75rem 0; max-width:44rem; padding:1.25rem; background:var(--wash); }
