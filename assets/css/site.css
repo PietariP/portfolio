@@ -200,7 +200,7 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 .section-body { min-width: 0; max-width: 44rem; }
 .case-study--revised .section-body > p { font-size: 1.075rem; line-height: 1.75; }
 .case-study--revised .section-body > p:first-child { margin-top: 0; }
-.case-study--revised .section-body > .section-takeaway { max-width: 32ch; margin-bottom: 1.1rem; font-size: clamp(1.35rem, 2vw, 1.7rem); font-weight: 500; line-height: 1.4; letter-spacing: -.025em; }
+.case-study--revised .section-body > .section-takeaway { max-width: none; margin-bottom: 1.1rem; font-size: clamp(1.35rem, 2vw, 1.7rem); font-weight: 500; line-height: 1.4; letter-spacing: -.025em; }
 .case-study--revised strong { font-weight: 600; }
 .case-figure--overview { max-width: 31rem; margin: 2rem 0 0; padding: 1.25rem 1rem 0; background: var(--wash); }
 .case-figure--overview > img { max-width: 26rem; mix-blend-mode: multiply; }
@@ -321,3 +321,38 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
   .image-viewer__panel { max-height: 96dvh; }
   .image-viewer__image { max-height: calc(96dvh - 15rem); }
 }
+
+.interface-decisions { max-width:44rem; padding-left:1.4rem; margin:1.25rem 0 0; }
+.interface-decisions li { margin:.65rem 0; line-height:1.65; }
+.prototype-story { margin-top:3rem; padding-top:2rem; border-top:1px solid #dce2e3; }
+.prototype-story h3 { font-size:clamp(1.5rem,3vw,2rem); line-height:1.2; letter-spacing:-.035em; margin:0 0 1.25rem; }
+.prototype-story > p { font-size:1.05rem; line-height:1.75; max-width:44rem; }
+.prototype-workflow { margin:1.75rem 0; max-width:44rem; padding:1.25rem; background:var(--wash); }
+.prototype-result { border-left:3px solid var(--accent); padding-left:1rem; margin-top:1.75rem; }
+
+.prototype-workflow h4 { margin:0 0 1.5rem; line-height:1.4; text-align:center; }
+.prototype-workflow h4 > span { display:block; font-size:.8rem; font-weight:500; color:var(--muted); margin-bottom:.35rem; }
+.prototype-workflow h4 > strong { display:block; font-size:1.25rem; font-weight:700; letter-spacing:-.025em; }
+.workflow-layout { display:grid; grid-template-columns:repeat(4,max-content); justify-content:center; align-items:center; gap:0 1.5rem; }
+.workflow-phase { position:relative; justify-self:center; width:max-content; max-width:8.5rem; padding:.7rem .65rem; border:1px solid var(--line); border-radius:.25rem; background:#fff; text-align:center; font-size:.8rem; font-weight:600; line-height:1.45; letter-spacing:.005em; }
+.workflow-arrow { position:absolute; left:calc(100% + .3rem); top:50%; transform:translateY(-50%); color:var(--accent); font-size:1.2rem; font-weight:400; }
+.workflow-loop { grid-column:2 / 4; grid-row:2; align-self:start; text-align:center; color:var(--accent); font-size:.75rem; line-height:1.4; }
+.workflow-loop svg { display:block; width:100%; height:2.4rem; overflow:visible; fill:none; stroke:currentColor; stroke-width:1.3; stroke-linecap:round; stroke-linejoin:round; }
+.workflow-loop .workflow-loop-narrow { display:none; }
+.workflow-loop span { display:block; margin-top:-.1rem; }
+@media(max-width:1100px) {
+ .workflow-layout { grid-template-columns:1fr; gap:1.8rem 0; }
+ .workflow-phase { grid-column:1; max-width:100%; }
+ .workflow-phase:nth-child(1) { grid-row:1; }
+ .workflow-phase:nth-child(2) { grid-row:2; }
+ .workflow-phase:nth-child(3) { grid-row:3; }
+ .workflow-phase:nth-child(4) { grid-row:4; }
+ .workflow-arrow { left:50%; top:calc(100% + .15rem); transform:translateX(-50%) rotate(90deg); }
+ .workflow-loop { position:relative; grid-column:1; grid-row:2 / 4; align-self:stretch; justify-self:center; width:15rem; max-width:100%; pointer-events:none; }
+ .workflow-loop .workflow-loop-wide { display:none; }
+ .workflow-loop .workflow-loop-narrow { display:block; position:absolute; left:0; top:0; width:4rem; height:100%; }
+ .workflow-loop span { position:absolute; left:-.5rem; top:50%; transform:translate(-50%,-50%) rotate(-90deg); white-space:nowrap; }
+}
+@media(max-width:700px) { .prototype-story > p { font-size:1rem; } }
+
+.visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }

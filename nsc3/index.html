@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="UX design for NSC3: defining operator workflows and adapting an existing design system for AI-assisted design and development.">
     <title>NSC3 — Pietari Pakarinen</title>
-    <link rel="stylesheet" href="../assets/css/site.css?v=20261028-14">
+    <link rel="stylesheet" href="../assets/css/site.css?v=20261030-5">
     <script src="../assets/js/image-viewer.js?v=20261028-3" defer></script>
     <link rel="canonical" href="https://pietarip.github.io/portfolio/nsc3/">
     <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
@@ -35,16 +35,14 @@
         <h1>NSC3</h1>
         <p class="case-deck">Designing new capabilities as part of a coherent product.</p>
         <p class="case-meta"><span>UX designer</span><span>January 2026–present</span></p>
-        <nav class="case-contents" aria-label="Case study sections"><a href="#context">Context</a><a href="#problem">Problem</a><a href="#process">Process</a><a href="#solution">Solution</a><a href="#impact">Impact</a></nav>
+        <nav class="case-contents" aria-label="Case study sections"><a href="#context">Context</a><a href="#problem">Problem</a><a href="#process">Process</a><a href="#solution">Solution</a><a href="#prototyping">Prototyping</a><a href="#impact">Impact</a></nav>
       </header>
 
       <section id="context" class="case-section">
         <h2>Context</h2>
         <div class="section-body">
           <p>NSC3 is a real-time situational-awareness and secure-communications platform for control-room operators and mobile field personnel. It brings video, location information and communications into a shared operational picture, including in degraded network environments.</p>
-          <p>I work across Modirum Platforms’ critical-communications portfolio, primarily as NSC3’s sole designer. Within R&amp;D, I help shape product direction, define requirements and design operator workflows, collaborating with product and engineering through implementation. I’ve also adapted NSC3’s existing design system for AI-assisted design and development, aligning Figma variables with code tokens and adding guidance for agents.</p>
-          <p>My direct user research has included organising and conducting a workshop with representatives of organisations using NSC3.</p>
-          <figure class="case-figure case-figure--screen"><img src="../assets/images/nsc3-events-portfolio.webp" alt="NSC3 Events design showing an event log beside the selected Event’s evidence, details and operational actions" width="1920" height="910" loading="lazy"><figcaption>Reconstructed example of Event inspection and response features I designed for prospective customers, with fictional sample data.</figcaption></figure>
+          <p>I work across Modirum Platforms’ critical-communications portfolio, primarily as NSC3’s sole designer. Within R&amp;D, I help shape product direction, define requirements and design operator workflows, collaborating with product and engineering through implementation.</p>
         </div>
       </section>
 
@@ -61,10 +59,8 @@
         <h2>Process</h2>
         <div class="section-body">
           <p>I defined a shared Event concept and designed a dedicated log with inspection on the same page. I organised the information around the operator’s questions: <strong>what happened, where, when, how it was detected, what has been done about it and what can be done next.</strong></p>
-          <p>From inspection, operators can create a Task or an Alert when a response is needed. Personal notification criteria let them decide in advance which Events should demand their attention.</p>
-          <p>I designed the flow around the operator deciding whether an Event warrants a Task. The product director also phased automatic Task creation into a later iteration. Keeping the initial workflow manual made it possible to inspect a detection before committing to a response.</p>
+          <p>Operators inspect an Event before deciding whether to create a Task or send an Alert. Personal notification criteria let them decide in advance which Events should demand their attention.</p>
           <aside class="design-decision" aria-label="A design decision"><p class="decision-label">One decision in detail</p><p>I considered embedding a new Task-creation dialog inside Event inspection. I kept the existing dialog: <strong>saving one click did not justify breaking an established pattern.</strong></p></aside>
-          <p>AI was already part of my workflow when I designed the original Events concept in Figma and worked through the behaviour with developers, who implemented it. Later work on Alerts and attention management expanded its role: agents helped draft requirements, produce designs and implement selected features, while I directed the decisions and developers reviewed the code.</p>
         </div>
       </section>
 
@@ -72,24 +68,49 @@
         <h2>Solution</h2>
         <div class="section-body">
           <p class="section-takeaway">From a detection to a deliberate response.</p>
-          <figure class="event-explanation" aria-labelledby="events-caption">
-            <ol class="event-flow">
-              <li><span class="flow-number">01</span><strong>Notice</strong><p>A shared log brings detection sources together. Matching Events notify operators according to their chosen criteria.</p></li>
-              <li><span class="flow-number">02</span><strong>Inspect</strong><p>Review the evidence and context alongside the log.</p></li>
-              <li><span class="flow-number">03</span><strong>Act</strong><p>Create a Task or send an Alert when a response is needed.</p></li>
-            </ol>
-            <figcaption id="events-caption">Simplified explanation of the Events workflow.</figcaption>
-          </figure>
+          <h3>Inspect and coordinate a response</h3>
           <p><strong>Keep the log visible during inspection.</strong> The first design stacked the inspection area above the log. Later iterations placed the selected Event in an adjacent panel, keeping the surrounding Events visible while the operator examines the evidence and available actions.</p>
-          <p>Field reports from an early POC later exposed a different problem: <strong>too many Events competing for attention.</strong> I reframed the next phase around personal subscriptions, notifications and better inspection. Subscriptions let Controllers define which Events should notify them; filtering narrows the log they are reviewing. These capabilities were deployed to a later face-recognition POC.</p>
+          <figure class="case-figure case-figure--screen"><img src="../assets/images/nsc3-events-portfolio.webp" alt="NSC3 Events design showing an event log beside the selected Event’s evidence, details and operational actions" width="1920" height="910" loading="lazy"><figcaption>Event inspection and response, reconstructed with fictional data.</figcaption></figure>
+          <ol class="interface-decisions">
+            <li><strong>Inspect alongside the log.</strong> Review a selected Event without leaving the surrounding activity.</li>
+            <li><strong>Organise evidence.</strong> Group the detection, supporting media and relevant details for assessment.</li>
+            <li><strong>Continue into action.</strong> Provide routes into established Task and Alert workflows when a response is needed.</li>
+            <li><strong>Coordinate the response.</strong> Once a Task or Alert is active, teams coordinate through the Task; the Alert tracks recipient responses.</li>
+          </ol>
+          <p>The response continues beyond Event inspection. I refined the requirements and designed the Web and Mobile experiences for Targeted Alerting: reaching selected recipients by SMS and LiveLink, tracking acknowledgements and keeping the response connected to a Task.</p>
+          <h3>Manage competing demands for attention</h3>
+          <p>The interface evolved as field reports exposed another problem: <strong>too many Events competing for attention.</strong> I reframed the next phase around personal subscriptions, notifications and better inspection. Subscriptions let Controllers define which Events should notify them; filtering narrows the log they are reviewing. In the inspection image above, the notification bells show which Events match subscriptions, and the “Notified events” filter helps operators focus on those matches. These capabilities were deployed to a later face-recognition POC.</p>
           <details class="evidence-details">
-            <summary>A trade-off: where personal subscriptions belong</summary>
-            <p>I proposed placing personal Event subscriptions on the Events page, close to the activity they control. I brought both options to review, including a drawback of my proposal: the controls would compete with the log for space.</p>
-            <p>The product director chose Manage, following conventions he knew from comparable systems. I worked within that direction, making <strong>personal ownership explicit in the naming and structure</strong> so these rules would be distinguishable from organisation-wide settings. Manage also offered more room for the information, and I reused its established interaction patterns.</p>
+            <summary>Resolving a design disagreement: subscription placement</summary>
+            <p>Design reviews often involve debating several possible solutions. With Event subscriptions, I thought the controls belonged on the Events page: they were closely related to the Events, and users would find them in context. The product director thought users would look under Manage, based on his experience and analysis of competing products.</p>
+            <p>We couldn’t test the alternatives with users at that point. I prepared designs for both options and brought their pros and cons to a team review. We discussed them and went with the product director’s preference.</p>
+            <p>The discussion was useful because it brought discoverability into focus. As I developed the Manage design, I paid particular attention to how the subscriptions were placed and labelled so users could find them and recognise them as their own.</p>
             <figure class="case-figure case-figure--screen"><img src="../assets/images/nsc3-subscriptions-portfolio.webp?v=20261030-1" alt="Reconstructed personal Event subscriptions in Manage and Notifications, showing two fictional subscriptions, one needing attention" width="1120" height="650" loading="lazy"><figcaption>Reconstructed example of personal Event subscriptions within Manage → Notifications, using fictional sample data. “My Event subscriptions” distinguishes personal preferences from organisation-wide settings.</figcaption></figure>
           </details>
-          <p>Targeted Alerting was a separate workflow: sending an Alert to selected recipients by SMS and LiveLink, with acknowledgement and recipient status. I refined its requirements and designed its Web and Mobile experiences for another POC.</p>
-          <p>I built a prototyping environment within NSC3’s codebase using existing product components, directing AI coding agents and submitting their work for developer review.</p>
+          <section class="prototype-story" id="prototyping" aria-labelledby="prototyping-title">
+            <h3 id="prototyping-title">Design and review behaviour in code</h3>
+            <p>I follow online discussion about how AI is changing UX design. Given time and resources to develop an AI-assisted design workflow, I established a prototyping environment within NSC3’s development codebase.</p>
+            <p>I adapted the existing design system by aligning Figma variables with code tokens and adding guidance for coding agents. Together with real product components, these foundations let agents build prototypes that follow the product’s conventions.</p>
+            <p>I direct agents to build and refine interface states and flows, retaining Figma for key layouts. The scrum team can review working interactions, and I need less state duplication and prototype wiring in Figma. Prototypes use fictional data and simulated services.</p>
+            <figure class="prototype-workflow" aria-labelledby="prototype-workflow-title">
+              <h4 id="prototype-workflow-title"><span>Modern product development approach</span><strong>Rapid AI-native prototyping</strong></h4>
+              <div class="workflow-layout" role="group" aria-label="Four phases, with iteration from review back to prototyping">
+                <div class="workflow-phase">Requirements and<br>key layouts<span class="workflow-arrow" aria-hidden="true">→</span></div>
+                <div class="workflow-phase">Interactive<br>code prototype<span class="workflow-arrow" aria-hidden="true">→</span></div>
+                <div class="workflow-phase">Designer refinement<br>and team review<span class="workflow-arrow" aria-hidden="true">→</span></div>
+                <div class="workflow-phase">Implementation<br>starting point</div>
+                <div class="workflow-loop">
+                  <svg class="workflow-loop-wide" viewBox="0 0 200 42" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="review-arrow-wide" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L7 4 L1 7"/></marker></defs><path d="M150 1 C150 43 50 43 50 2" marker-end="url(#review-arrow-wide)"/></svg>
+                  <svg class="workflow-loop-narrow" viewBox="0 0 36 200" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="review-arrow-narrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L7 4 L1 7"/></marker></defs><path d="M25 160 C-5 160 -5 40 33 40" marker-end="url(#review-arrow-narrow)"/></svg>
+                  <span>Refine and review</span>
+                </div>
+              </div>
+              <figcaption class="visually-hidden">Requirements and layouts inform an interactive prototype. Designer refinement and team review feed revisions back into the prototype before implementation.</figcaption>
+            </figure>
+            <p><strong>The workflow in practice: Event image viewer.</strong> I used Figma to establish the layout and a coded prototype to refine zooming, panning and behaviour at narrower window sizes. I completed the design and prototype on the same day, then reviewed the interaction with our Web developer.</p>
+            <figure class="case-figure case-figure--screen"><img src="../assets/images/nsc3-viewer-detail.webp" width="1200" height="675" loading="lazy" alt="Reconstructed Event image viewer zoomed into the detected person, retaining Event details and media navigation"><figcaption>Event image viewer, reconstructed with fictional data. I refined zooming and panning in the code prototype.</figcaption></figure>
+            <p class="prototype-result">Our Web developer used the image-viewer prototype code as a starting point for implementation, describing it as mostly usable as is.</p>
+          </section>
         </div>
       </section>
 
@@ -98,8 +119,7 @@
         <div class="section-body">
           <p class="section-takeaway">From ambiguous requests to implemented POC workflows.</p>
           <p>Developers implemented the Events concept, and it was deployed to partner POCs. Subscriptions, notifications and filtering followed in the later face-recognition POC, while Targeted Alerting was deployed for its own customer exercise.</p>
-          <p>Events and Alerts were deployed for POC use and were not enabled in the general releases at this stage. The later filtering and subscription changes are in field use.</p>
-          <p>My contribution has been to turn urgent requests into defined requirements and coherent behaviours, follow them through implementation, and revise them as field reports and engineering reviews reveal what needs to change.</p>
+          <p>Alongside these product capabilities, I established a code-based workflow for design reviews and implementation handoff. The scrum team has used it to review new interactions, and the image-viewer prototype supplied a developer with code to start implementation.</p>
         </div>
       </section>
     </main>
