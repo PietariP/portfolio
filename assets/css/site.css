@@ -181,7 +181,7 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 .work-card .work-title { order: 1; }
 .work-title h3 { margin: 0; font-size: clamp(1.35rem, 2.1vw, 1.75rem); font-weight: 600; line-height: 1.25; letter-spacing: -.04em; }
 .work-title > span { color: var(--accent); font-size: 1.3rem; transition: transform .18s ease; }
-.work-card-copy > p:not(.work-meta) { order: 2; max-width: 52ch; min-height: 4.95em; margin: .65rem 0 1rem; font-size: 1rem; line-height: 1.65; }
+.work-card-copy > p:not(.work-meta) { order: 2; max-width: none; min-height: 4.95em; margin: .65rem 0 1rem; font-size: 1rem; line-height: 1.65; }
 .work-discipline { order: 4; margin-top: .8rem; color: var(--muted); font-size: .76rem; line-height: 1.6; }
 .work-card:hover .work-title h3, .work-card:focus-visible .work-title h3 { text-decoration: underline; text-underline-offset: .2em; }
 .work-card:hover .work-title > span { transform: translate(.12rem, -.12rem); }
@@ -333,10 +333,10 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 .prototype-workflow h4 { margin:0 0 1.5rem; line-height:1.4; text-align:center; }
 .prototype-workflow h4 > span { display:block; font-size:.8rem; font-weight:500; color:var(--muted); margin-bottom:.35rem; }
 .prototype-workflow h4 > strong { display:block; font-size:1.25rem; font-weight:700; letter-spacing:-.025em; }
-.workflow-layout { display:grid; grid-template-columns:repeat(4,max-content); justify-content:center; align-items:center; gap:0 1.5rem; }
-.workflow-phase { position:relative; justify-self:center; width:max-content; max-width:8.5rem; padding:.7rem .65rem; border:1px solid var(--line); border-radius:.25rem; background:#fff; text-align:center; font-size:.8rem; font-weight:600; line-height:1.45; letter-spacing:.005em; }
+.workflow-layout { display:grid; grid-template-columns:repeat(5,max-content); justify-content:center; align-items:center; gap:0 1.25rem; }
+.workflow-phase { position:relative; justify-self:center; width:max-content; max-width:7rem; padding:.7rem .65rem; border:1px solid var(--line); border-radius:.25rem; background:#fff; text-align:center; font-size:.8rem; font-weight:600; line-height:1.45; letter-spacing:.005em; }
 .workflow-arrow { position:absolute; left:calc(100% + .3rem); top:50%; transform:translateY(-50%); color:var(--accent); font-size:1.2rem; font-weight:400; }
-.workflow-loop { grid-column:2 / 4; grid-row:2; align-self:start; text-align:center; color:var(--accent); font-size:.75rem; line-height:1.4; }
+.workflow-loop { grid-column:3 / 5; grid-row:2; align-self:start; text-align:center; color:var(--accent); font-size:.75rem; line-height:1.4; }
 .workflow-loop svg { display:block; width:100%; height:2.4rem; overflow:visible; fill:none; stroke:currentColor; stroke-width:1.3; stroke-linecap:round; stroke-linejoin:round; }
 .workflow-loop .workflow-loop-narrow { display:none; }
 .workflow-loop span { display:block; margin-top:-.1rem; }
@@ -347,8 +347,9 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
  .workflow-phase:nth-child(2) { grid-row:2; }
  .workflow-phase:nth-child(3) { grid-row:3; }
  .workflow-phase:nth-child(4) { grid-row:4; }
+ .workflow-phase:nth-child(5) { grid-row:5; }
  .workflow-arrow { left:50%; top:calc(100% + .15rem); transform:translateX(-50%) rotate(90deg); }
- .workflow-loop { position:relative; grid-column:1; grid-row:2 / 4; align-self:stretch; justify-self:center; width:15rem; max-width:100%; pointer-events:none; }
+ .workflow-loop { position:relative; grid-column:1; grid-row:3 / 5; align-self:stretch; justify-self:center; width:15rem; max-width:100%; pointer-events:none; }
  .workflow-loop .workflow-loop-wide { display:none; }
  .workflow-loop .workflow-loop-narrow { display:block; position:absolute; left:0; top:0; width:4rem; height:100%; }
  .workflow-loop span { position:absolute; left:-.5rem; top:50%; transform:translate(-50%,-50%) rotate(-90deg); white-space:nowrap; }
@@ -356,3 +357,8 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 @media(max-width:700px) { .prototype-story > p { font-size:1rem; } }
 
 .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+.site-footer--compact { flex-direction:row; align-items:center; gap:1rem; padding-block:1rem; }
+.site-footer--compact .footer-copyright { font-size:.7rem; }
+.site-footer--compact .contact-link { justify-content:center; flex-shrink:0; width:2.75rem; height:2.75rem; border-radius:.25rem; }
+.site-footer--compact .contact-link:hover { background:var(--wash); }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="UX design for NSC3: defining operator workflows and adapting an existing design system for AI-assisted design and development.">
     <title>NSC3 — Pietari Pakarinen</title>
-    <link rel="stylesheet" href="../assets/css/site.css?v=20261030-5">
+    <link rel="stylesheet" href="../assets/css/site.css?v=20261030-7">
     <script src="../assets/js/image-viewer.js?v=20261028-3" defer></script>
     <link rel="canonical" href="https://pietarip.github.io/portfolio/nsc3/">
     <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
@@ -42,7 +42,7 @@
         <h2>Context</h2>
         <div class="section-body">
           <p>NSC3 is a real-time situational-awareness and secure-communications platform for control-room operators and mobile field personnel. It brings video, location information and communications into a shared operational picture, including in degraded network environments.</p>
-          <p>I work across Modirum Platforms’ critical-communications portfolio, primarily as NSC3’s sole designer. Within R&amp;D, I help shape product direction, define requirements and design operator workflows, collaborating with product and engineering through implementation.</p>
+          <p>I work across the critical-communications portfolio, but primarily as NSC3’s sole designer. My role is broad. I turn the identified needs that line up with the product roadmap into clear requirements and work out how they fit into the existing product, while keeping it coherent and usable for existing customers.</p>
         </div>
       </section>
 
@@ -50,7 +50,7 @@
         <h2>Problem</h2>
         <div class="section-body">
           <p class="section-takeaway">A customer request is the starting point. The design has to work across the product.</p>
-          <p>The Events concept is one example. Partner video analytics, body-camera activations and NSC3’s own AI detections all needed a place in the experience. The requests left fundamental questions open: should Events live in Task chat or a dedicated log? What information matters to an operator? When should a detection become a Task?</p>
+          <p>Control-room operators needed to know when their sources captured something that required their attention. An AI detection or a body camera being activated, for example. NSC3 needed to improve as a situational-awareness platform, and I defined these occurrences as an “Events” concept. Then I needed to work out how to fit them into the product: where operators would find them, what information they needed to assess them, and how they could respond.</p>
           <p>The challenge was to define one understandable workflow across these sources, while preserving Tasks as the place where teams coordinate their response.</p>
         </div>
       </section>
@@ -58,7 +58,8 @@
       <section id="process" class="case-section">
         <h2>Process</h2>
         <div class="section-body">
-          <p>I defined a shared Event concept and designed a dedicated log with inspection on the same page. I organised the information around the operator’s questions: <strong>what happened, where, when, how it was detected, what has been done about it and what can be done next.</strong></p>
+          <p>Needs come from several directions: sales, support staff working with customers, and product management. I involve the product manager and developers in refining them, so the solution isn’t something I work out entirely on my own.</p>
+          <p>For Events, I designed a dedicated log with inspection on the same page. I organised the information around the operator’s questions: <strong>what happened, where, when, how it was detected, what has been done about it and what can be done next.</strong></p>
           <p>Operators inspect an Event before deciding whether to create a Task or send an Alert. Personal notification criteria let them decide in advance which Events should demand their attention.</p>
           <aside class="design-decision" aria-label="A design decision"><p class="decision-label">One decision in detail</p><p>I considered embedding a new Task-creation dialog inside Event inspection. I kept the existing dialog: <strong>saving one click did not justify breaking an established pattern.</strong></p></aside>
         </div>
@@ -69,10 +70,10 @@
         <div class="section-body">
           <p class="section-takeaway">From a detection to a deliberate response.</p>
           <h3>Inspect and coordinate a response</h3>
-          <p><strong>Keep the log visible during inspection.</strong> The first design stacked the inspection area above the log. Later iterations placed the selected Event in an adjacent panel, keeping the surrounding Events visible while the operator examines the evidence and available actions.</p>
+          <p><strong>Keep the event log visible during inspection.</strong> The first design stacked the inspection area above the log. Later iterations placed the selected Event in an adjacent panel, keeping the surrounding Events visible while the operator examines the evidence and available actions.</p>
           <figure class="case-figure case-figure--screen"><img src="../assets/images/nsc3-events-portfolio.webp" alt="NSC3 Events design showing an event log beside the selected Event’s evidence, details and operational actions" width="1920" height="910" loading="lazy"><figcaption>Event inspection and response, reconstructed with fictional data.</figcaption></figure>
           <ol class="interface-decisions">
-            <li><strong>Inspect alongside the log.</strong> Review a selected Event without leaving the surrounding activity.</li>
+            <li><strong>Inspect alongside the event log.</strong> Review a selected Event without losing its context.</li>
             <li><strong>Organise evidence.</strong> Group the detection, supporting media and relevant details for assessment.</li>
             <li><strong>Continue into action.</strong> Provide routes into established Task and Alert workflows when a response is needed.</li>
             <li><strong>Coordinate the response.</strong> Once a Task or Alert is active, teams coordinate through the Task; the Alert tracks recipient responses.</li>
@@ -81,7 +82,7 @@
           <h3>Manage competing demands for attention</h3>
           <p>The interface evolved as field reports exposed another problem: <strong>too many Events competing for attention.</strong> I reframed the next phase around personal subscriptions, notifications and better inspection. Subscriptions let Controllers define which Events should notify them; filtering narrows the log they are reviewing. In the inspection image above, the notification bells show which Events match subscriptions, and the “Notified events” filter helps operators focus on those matches. These capabilities were deployed to a later face-recognition POC.</p>
           <details class="evidence-details">
-            <summary>Resolving a design disagreement: subscription placement</summary>
+            <summary>Resolving a design debate: subscription placement</summary>
             <p>Design reviews often involve debating several possible solutions. With Event subscriptions, I thought the controls belonged on the Events page: they were closely related to the Events, and users would find them in context. The product director thought users would look under Manage, based on his experience and analysis of competing products.</p>
             <p>We couldn’t test the alternatives with users at that point. I prepared designs for both options and brought their pros and cons to a team review. We discussed them and went with the product director’s preference.</p>
             <p>The discussion was useful because it brought discoverability into focus. As I developed the Manage design, I paid particular attention to how the subscriptions were placed and labelled so users could find them and recognise them as their own.</p>
@@ -91,21 +92,22 @@
             <h3 id="prototyping-title">Design and review behaviour in code</h3>
             <p>I follow online discussion about how AI is changing UX design. Given time and resources to develop an AI-assisted design workflow, I established a prototyping environment within NSC3’s development codebase.</p>
             <p>I adapted the existing design system by aligning Figma variables with code tokens and adding guidance for coding agents. Together with real product components, these foundations let agents build prototypes that follow the product’s conventions.</p>
-            <p>I direct agents to build and refine interface states and flows, retaining Figma for key layouts. The scrum team can review working interactions, and I need less state duplication and prototype wiring in Figma. Prototypes use fictional data and simulated services.</p>
+            <p>I define the requirements in Jira epics and tickets, design the interface in Figma, then direct AI to build an interactive version in the prototyping environment I’ve built into our development environment. There I can work through the states, flows and interactions. Prototypes use fictional data and simulated services.</p>
             <figure class="prototype-workflow" aria-labelledby="prototype-workflow-title">
               <h4 id="prototype-workflow-title"><span>Modern product development approach</span><strong>Rapid AI-native prototyping</strong></h4>
-              <div class="workflow-layout" role="group" aria-label="Four phases, with iteration from review back to prototyping">
-                <div class="workflow-phase">Requirements and<br>key layouts<span class="workflow-arrow" aria-hidden="true">→</span></div>
-                <div class="workflow-phase">Interactive<br>code prototype<span class="workflow-arrow" aria-hidden="true">→</span></div>
-                <div class="workflow-phase">Designer refinement<br>and team review<span class="workflow-arrow" aria-hidden="true">→</span></div>
-                <div class="workflow-phase">Implementation<br>starting point</div>
+              <div class="workflow-layout" role="group" aria-label="Five phases, with iteration from review back to prototyping">
+                <div class="workflow-phase">Gather and refine<br>requirements<span class="workflow-arrow" aria-hidden="true">→</span></div>
+                <div class="workflow-phase">Design how the<br>capability fits<span class="workflow-arrow" aria-hidden="true">→</span></div>
+                <div class="workflow-phase">Build an interactive<br>code prototype<span class="workflow-arrow" aria-hidden="true">→</span></div>
+                <div class="workflow-phase">Refine and review<br>the design<span class="workflow-arrow" aria-hidden="true">→</span></div>
+                <div class="workflow-phase">Use as an implementation<br>starting point</div>
                 <div class="workflow-loop">
                   <svg class="workflow-loop-wide" viewBox="0 0 200 42" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="review-arrow-wide" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L7 4 L1 7"/></marker></defs><path d="M150 1 C150 43 50 43 50 2" marker-end="url(#review-arrow-wide)"/></svg>
                   <svg class="workflow-loop-narrow" viewBox="0 0 36 200" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="review-arrow-narrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L7 4 L1 7"/></marker></defs><path d="M25 160 C-5 160 -5 40 33 40" marker-end="url(#review-arrow-narrow)"/></svg>
-                  <span>Refine and review</span>
+                  <span>Apply learnings</span>
                 </div>
               </div>
-              <figcaption class="visually-hidden">Requirements and layouts inform an interactive prototype. Designer refinement and team review feed revisions back into the prototype before implementation.</figcaption>
+              <figcaption class="visually-hidden">Gather and refine requirements, design how the capability fits, build an interactive code prototype, refine and review the design, and use it as an implementation starting point. Apply learnings from design review back to the prototype.</figcaption>
             </figure>
             <p><strong>The workflow in practice: Event image viewer.</strong> I used Figma to establish the layout and a coded prototype to refine zooming, panning and behaviour at narrower window sizes. I completed the design and prototype on the same day, then reviewed the interaction with our Web developer.</p>
             <figure class="case-figure case-figure--screen"><img src="../assets/images/nsc3-viewer-detail.webp" width="1200" height="675" loading="lazy" alt="Reconstructed Event image viewer zoomed into the detected person, retaining Event details and media navigation"><figcaption>Event image viewer, reconstructed with fictional data. I refined zooming and panning in the code prototype.</figcaption></figure>
@@ -123,11 +125,10 @@
         </div>
       </section>
     </main>
-    <nav class="case-pagination" aria-label="Other case studies"><a href="../locust-swarm/"><span class="pagination-arrow" aria-hidden="true">←</span><span class="pagination-copy"><span class="pagination-label">Previous project</span><span class="pagination-destination">Locust Swarm</span></span></a><a href="../usability-toolset/"><span class="pagination-copy"><span class="pagination-label">Next project</span><span class="pagination-destination">Usability scoring toolset</span></span><span class="pagination-arrow" aria-hidden="true">→</span></a></nav>
-    <footer class="site-footer">
-      <p>Let’s work together</p>
-      <a class="contact-link" href="https://www.linkedin.com/in/pietari-pakarinen/">Connect on LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.35H4.96V9.5h2.97v8.85ZM6.45 8.29c-.96 0-1.73-.78-1.73-1.73s.77-1.73 1.73-1.73 1.73.78 1.73 1.73-.77 1.73-1.73 1.73Zm11.9 10.06h-2.96v-4.3c0-1.03-.02-2.35-1.43-2.35-1.44 0-1.66 1.12-1.66 2.28v4.37H9.34V9.5h2.84v1.21h.04c.4-.7 1.36-1.43 2.8-1.43 3 0 3.56 1.97 3.56 4.53v4.54Z"/></svg></a>
+    <nav class="case-pagination" aria-label="Other case studies"><a href="../#work"><span class="pagination-arrow" aria-hidden="true">←</span><span class="pagination-copy"><span class="pagination-label">All projects</span><span class="pagination-destination">Selected work</span></span></a><a href="../locust-swarm/"><span class="pagination-copy"><span class="pagination-label">Next project</span><span class="pagination-destination">Locust Swarm</span></span><span class="pagination-arrow" aria-hidden="true">→</span></a></nav>
+    <footer class="site-footer site-footer--compact">
+      <span class="footer-copyright">Pietari Pakarinen · 2026 · All rights reserved</span>
+      <a class="contact-link" aria-label="Pietari Pakarinen on LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/pietari-pakarinen/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.35H4.96V9.5h2.97v8.85ZM6.45 8.29c-.96 0-1.73-.78-1.73-1.73s.77-1.73 1.73-1.73 1.73.78 1.73 1.73-.77 1.73-1.73 1.73Zm11.9 10.06h-2.96v-4.3c0-1.03-.02-2.35-1.43-2.35-1.44 0-1.66 1.12-1.66 2.28v4.37H9.34V9.5h2.84v1.21h.04c.4-.7 1.36-1.43 2.8-1.43 3 0 3.56 1.97 3.56 4.53v4.54Z"/></svg></a>
     </footer>
-    <div class="copyright">Pietari Pakarinen · 2026 · All rights reserved</div>
   </body>
 </html>
