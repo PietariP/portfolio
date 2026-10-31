@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Developing an AI-assisted design workflow at Modirum Platforms: real product components, interactive code prototypes and implementation handoff.">
+    <title>AI-assisted design workflow — Pietari Pakarinen</title>
+    <link rel="stylesheet" href="../assets/css/site.css?v=20261031-1">
+    <script src="../assets/js/image-viewer.js?v=20261028-3" defer></script>
+    <script src="../assets/js/workflow-diagram.js?v=20261031-1" defer></script>
+    <link rel="canonical" href="https://pietarip.github.io/portfolio/workflow/">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pietari Pakarinen — Portfolio">
+    <meta property="og:title" content="AI-assisted design workflow — Pietari Pakarinen">
+    <meta property="og:description" content="Developing an AI-assisted design workflow at Modirum Platforms: real product components, interactive code prototypes and implementation handoff.">
+    <meta property="og:url" content="https://pietarip.github.io/portfolio/workflow/">
+    <meta property="og:image" content="https://pietarip.github.io/portfolio/assets/images/nsc3-viewer-detail.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    <meta property="og:image:alt" content="Reconstructed Event image viewer developed through the AI-assisted workflow">
+    <meta name="twitter:card" content="summary_large_image">
+  </head>
+  <body class="has-case-nav revised-case">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="page-header"><nav class="nav" aria-label="Main navigation">
+        <a class="wordmark" href="../">Pietari Pakarinen</a>
+        <div class="nav-links"><a class="nav-link" href="../#work">Work</a><a class="nav-link" href="../workflow/" aria-current="page">Workflow</a><a class="nav-link" href="../about/">About</a></div>
+      </nav></header>
+    <main id="main" tabindex="-1" class="case-study case-study--revised">
+      <header class="case-opening">
+        <p class="eyebrow">Modirum Platforms · Developed while working on NSC3</p>
+        <h1>Building an AI-assisted design workflow</h1>
+        <p class="case-deck">From interface designs to working interactions and implementation starting points.</p>
+        <p class="case-meta"><span>Workflow development</span><span>September 2026–present</span></p>
+        <nav class="case-contents" aria-label="Case study sections"><a href="#context">Context</a><a href="#problem">Problem</a><a href="#process">Process</a><a href="#solution">Solution</a><a href="#impact">Impact</a></nav>
+      </header>
+      <section id="context" class="case-section">
+        <h2>Context</h2>
+        <div class="section-body">
+          <p>At Modirum Platforms, I work primarily as the sole designer for <a href="../nsc3/">NSC3, a situational-awareness and critical-communications platform</a>. I follow discussion about how AI is changing UX design, and was given time and resources to develop how we use it in our design and development work.</p>
+        </div>
+      </section>
+      <section id="problem" class="case-section">
+        <h2>Problem</h2>
+        <div class="section-body">
+          <p>Covering a feature’s flows and states meant creating and maintaining a large number of screens in Figma. When a design review identified changes, I had to revise those screens and go through them again before developers could see what needed adjusting.</p>
+          <p>This could interrupt other priorities while the feature was already being developed or partly implemented. Developers then had to compare the revised designs with the implementation to work out the differences.</p>
+          <p>I wanted to keep Figma for defining layouts, while moving more of the detailed states and interactions into working code. For coding agents to build interfaces that fit NSC3, they also needed clear guidance on NSC3’s design conventions.</p>
+        </div>
+      </section>
+      <section id="process" class="case-section">
+        <h2>Process</h2>
+        <div class="section-body">
+          <h3 class="section-first-heading">Starting with a delivery pilot</h3>
+          <p>My first practical pilot came during preparations for a targeted alerting customer demo. Developers wouldn’t have time to implement the required recipient-facing LiveLink, so I volunteered to build it. I directed AI to implement my designs in the product codebase and checked the behaviour locally. Our Web developer reviewed the code and made last-minute fixes before it was merged and delivered for the customer demo.</p>
+          <h3>Establishing a reusable approach</h3>
+          <p>I later used <a href="https://www.linkedin.com/pulse/kuka-varmistaa-asiakaskokemuksen-laadun-kun-ai-agentit-3dzlf/">Alpha Design Partners’ AI-native design maturity framework</a> to structure the next steps. I aligned Figma variables with code tokens and added repository guidance for coding agents. These shared rules support NSC3 Web development as well as prototypes.</p>
+          <p>I established a dedicated prototyping environment within the development codebase, using actual components, fictional data and simulated services.</p>
+          <p>I design the minimum UI needed for the feature in Figma, then direct AI to build an interactive code prototype. In the prototype, I add states, interactions and responsiveness, and demonstrate the flows. I apply review feedback directly to the prototype, where the team can examine the revised behaviour. Prototype code can then provide a starting point for developers to review and adapt for implementation.</p>
+            <figure class="prototype-workflow" aria-labelledby="prototype-workflow-title">
+              <h3 id="prototype-workflow-title"><span>Modern product development approach</span><strong>Rapid AI-native prototyping</strong></h3>
+              <div class="workflow-layout" role="group" aria-label="Five phases, with iteration from review back to prototyping">
+                <div class="workflow-phase">Gather and refine<br>requirements<span class="workflow-arrow" aria-hidden="true">→</span></div>
+                <div class="workflow-phase">Design how the<br>capability fits<span class="workflow-arrow" aria-hidden="true">→</span></div>
+                <div class="workflow-phase">Build out the interactive<br>code prototype<span class="workflow-arrow" aria-hidden="true">→</span></div>
+                <div class="workflow-phase">Review with the team<span class="workflow-arrow" aria-hidden="true">→</span></div>
+                <div class="workflow-phase">Use as an implementation<br>starting point</div>
+                <div class="workflow-loop">
+                  <svg aria-hidden="true"><defs><marker id="review-arrow-loop" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L7 4 L1 7"/></marker></defs><path class="workflow-loop-path" marker-end="url(#review-arrow-loop)"/></svg>
+                  <span>Apply review feedback</span>
+                </div>
+              </div>
+              <figcaption class="visually-hidden">Gather and refine requirements, design how the capability fits, build out the interactive code prototype, review with the team, and use it as an implementation starting point. Return to the prototype to apply feedback from design review. Developers review and adapt prototype code for implementation.</figcaption>
+            </figure>
+        </div>
+      </section>
+      <section id="solution" class="case-section">
+        <h2>Solution</h2>
+        <div class="section-body">
+          <p class="section-takeaway">The workflow in practice: Event image viewer.</p>
+          <p>Operators use the viewer to examine images associated with an Event, such as a detection requiring their attention. The design needed to support closer inspection while retaining the Event details and navigation between images.</p>
+          <p>I used Figma to establish the layout and a coded prototype to refine zooming, panning and behaviour at narrower window sizes. I completed the design and prototype on the same day, then reviewed the interaction with our Web developer.</p>
+            <figure class="case-figure case-figure--screen"><img src="../assets/images/nsc3-viewer-detail.webp" width="1200" height="675" loading="lazy" alt="Reconstructed Event image viewer zoomed into the detected person, retaining Event details and media navigation"><figcaption>Event image viewer, reconstructed with fictional data.</figcaption></figure>
+        </div>
+      </section>
+      <section id="impact" class="case-section">
+        <h2>Impact</h2>
+        <div class="section-body">
+          <p>The LiveLink pilot reached the customer POC after developer review and corrections. The subsequent prototyping environment has been used by the scrum team for design reviews, bringing working interactions into the discussion.</p>
+          <p class="prototype-result">Our Web developer used the image-viewer prototype code as a starting point for implementation, describing it as mostly usable as is.</p>
+          <p>The workflow has been used for a few features so far. It gives me a way to refine behaviour in code and provide a concrete starting point for engineering, alongside the interface layouts in Figma.</p>
+        </div>
+      </section>
+    </main>
+    <nav class="case-pagination" aria-label="Related work"><a href="../#work"><span class="pagination-arrow" aria-hidden="true">←</span><span class="pagination-copy"><span class="pagination-label">All projects</span><span class="pagination-destination">Selected work</span></span></a><a href="../nsc3/"><span class="pagination-copy"><span class="pagination-label">Related case</span><span class="pagination-destination">NSC3</span></span><span class="pagination-arrow" aria-hidden="true">→</span></a></nav>
+    <footer class="site-footer site-footer--compact">
+      <span class="footer-copyright">Pietari Pakarinen · 2026 · All rights reserved</span>
+      <a class="contact-link" aria-label="Pietari Pakarinen on LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/pietari-pakarinen/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.35H4.96V9.5h2.97v8.85ZM6.45 8.29c-.96 0-1.73-.78-1.73-1.73s.77-1.73 1.73-1.73 1.73.78 1.73 1.73-.77 1.73-1.73 1.73Zm11.9 10.06h-2.96v-4.3c0-1.03-.02-2.35-1.43-2.35-1.44 0-1.66 1.12-1.66 2.28v4.37H9.34V9.5h2.84v1.21h.04c.4-.7 1.36-1.43 2.8-1.43 3 0 3.56 1.97 3.56 4.53v4.54Z"/></svg></a>
+    </footer>
+  </body>
+</html>

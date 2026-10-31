@@ -11,7 +11,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ('index.html', 'about/index.html', 'nsc3/index.html',
+PAGES = ('index.html', 'about/index.html', 'nsc3/index.html', 'workflow/index.html',
          'locust-swarm/index.html', 'usability-toolset/index.html', 'bi-reporting/index.html')
 
 

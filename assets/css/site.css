@@ -330,18 +330,17 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 .prototype-workflow { margin:1.75rem 0; max-width:44rem; padding:1.25rem; background:var(--wash); }
 .prototype-result { border-left:3px solid var(--accent); padding-left:1rem; margin-top:1.75rem; }
 
-.prototype-workflow h4 { margin:0 0 1.5rem; line-height:1.4; text-align:center; }
-.prototype-workflow h4 > span { display:block; font-size:.8rem; font-weight:500; color:var(--muted); margin-bottom:.35rem; }
-.prototype-workflow h4 > strong { display:block; font-size:1.25rem; font-weight:700; letter-spacing:-.025em; }
-.workflow-layout { display:grid; grid-template-columns:repeat(5,max-content); justify-content:center; align-items:center; gap:0 1.25rem; }
+.prototype-workflow h3 { margin:0 0 1.5rem; line-height:1.4; text-align:center; }
+.prototype-workflow h3 > span { display:block; font-size:.8rem; font-weight:500; color:var(--muted); margin-bottom:.35rem; }
+.prototype-workflow h3 > strong { display:block; font-size:1.25rem; font-weight:700; letter-spacing:-.025em; }
+.workflow-layout { position:relative; display:grid; grid-template-columns:repeat(5,max-content); justify-content:center; align-items:center; gap:0 1.25rem; padding-bottom:4.5rem; }
 .workflow-phase { position:relative; justify-self:center; width:max-content; max-width:7rem; padding:.7rem .65rem; border:1px solid var(--line); border-radius:.25rem; background:#fff; text-align:center; font-size:.8rem; font-weight:600; line-height:1.45; letter-spacing:.005em; }
 .workflow-arrow { position:absolute; left:calc(100% + .3rem); top:50%; transform:translateY(-50%); color:var(--accent); font-size:1.2rem; font-weight:400; }
-.workflow-loop { grid-column:3 / 5; grid-row:2; align-self:start; text-align:center; color:var(--accent); font-size:.75rem; line-height:1.4; }
-.workflow-loop svg { display:block; width:100%; height:2.4rem; overflow:visible; fill:none; stroke:currentColor; stroke-width:1.3; stroke-linecap:round; stroke-linejoin:round; }
-.workflow-loop .workflow-loop-narrow { display:none; }
-.workflow-loop span { display:block; margin-top:-.1rem; }
+.workflow-loop { position:absolute; inset:0; pointer-events:none; color:var(--accent); font-size:.75rem; line-height:1.4; }
+.workflow-loop svg { display:block; width:100%; height:100%; overflow:visible; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+.workflow-loop span { position:absolute; white-space:nowrap; }
 @media(max-width:1100px) {
- .workflow-layout { grid-template-columns:1fr; gap:1.8rem 0; }
+ .workflow-layout { grid-template-columns:1fr; gap:1.8rem 0; padding:0 0 0 3.5rem; }
  .workflow-phase { grid-column:1; max-width:100%; }
  .workflow-phase:nth-child(1) { grid-row:1; }
  .workflow-phase:nth-child(2) { grid-row:2; }
@@ -349,10 +348,6 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
  .workflow-phase:nth-child(4) { grid-row:4; }
  .workflow-phase:nth-child(5) { grid-row:5; }
  .workflow-arrow { left:50%; top:calc(100% + .15rem); transform:translateX(-50%) rotate(90deg); }
- .workflow-loop { position:relative; grid-column:1; grid-row:3 / 5; align-self:stretch; justify-self:center; width:15rem; max-width:100%; pointer-events:none; }
- .workflow-loop .workflow-loop-wide { display:none; }
- .workflow-loop .workflow-loop-narrow { display:block; position:absolute; left:0; top:0; width:4rem; height:100%; }
- .workflow-loop span { position:absolute; left:-.5rem; top:50%; transform:translate(-50%,-50%) rotate(-90deg); white-space:nowrap; }
 }
 @media(max-width:700px) { .prototype-story > p { font-size:1rem; } }
 
@@ -362,3 +357,13 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 .site-footer--compact .footer-copyright { font-size:.7rem; }
 .site-footer--compact .contact-link { justify-content:center; flex-shrink:0; width:2.75rem; height:2.75rem; border-radius:.25rem; }
 .site-footer--compact .contact-link:hover { background:var(--wash); }
+
+/* Related workflow case and the shared navigation. */
+.nav-link[aria-current="page"] { text-decoration:underline; text-underline-offset:.3em; }
+.case-opening .related-case { margin:.8rem 0 0; font-size:.9rem; line-height:1.6; color:var(--muted); }
+.case-study--revised .section-body > .section-first-heading { margin-top:0; }
+#prototyping { scroll-margin-top:1.5rem; }
+@media(max-width:480px) {
+  .nav { flex-wrap:wrap; gap:0 .75rem; }
+  .nav-links { flex-wrap:wrap; gap:.25rem 1rem; }
+}
