@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Developing an AI-assisted design workflow at Modirum Platforms: real product components, interactive code prototypes and implementation handoff.">
     <title>AI-assisted design workflow — Pietari Pakarinen</title>
-    <link rel="stylesheet" href="../assets/css/site.css?v=20261031-1">
+    <link rel="stylesheet" href="../assets/css/site.css?v=20261031-3">
     <script src="../assets/js/image-viewer.js?v=20261028-3" defer></script>
     <script src="../assets/js/workflow-diagram.js?v=20261031-1" defer></script>
     <link rel="canonical" href="https://pietarip.github.io/portfolio/workflow/">
@@ -21,7 +21,7 @@
     <meta property="og:image" content="https://pietarip.github.io/portfolio/assets/images/nsc3-viewer-detail.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="675">
-    <meta property="og:image:alt" content="Reconstructed Event image viewer developed through the AI-assisted workflow">
+    <meta property="og:image:alt" content="Reconstructed event image viewer developed through the AI-assisted workflow">
     <meta name="twitter:card" content="summary_large_image">
   </head>
   <body class="has-case-nav revised-case">
@@ -31,17 +31,14 @@
         <div class="nav-links"><a class="nav-link" href="../#work">Work</a><a class="nav-link" href="../workflow/" aria-current="page">Workflow</a><a class="nav-link" href="../about/">About</a></div>
       </nav></header>
     <main id="main" tabindex="-1" class="case-study case-study--revised">
-      <header class="case-opening">
-        <p class="eyebrow">Modirum Platforms · Developed while working on NSC3</p>
+      <header class="case-opening workflow-opening">
         <h1>Building an AI-assisted design workflow</h1>
-        <p class="case-deck">From interface designs to working interactions and implementation starting points.</p>
-        <p class="case-meta"><span>Workflow development</span><span>September 2026–present</span></p>
         <nav class="case-contents" aria-label="Case study sections"><a href="#context">Context</a><a href="#problem">Problem</a><a href="#process">Process</a><a href="#solution">Solution</a><a href="#impact">Impact</a></nav>
       </header>
       <section id="context" class="case-section">
         <h2>Context</h2>
         <div class="section-body">
-          <p>At Modirum Platforms, I work primarily as the sole designer for <a href="../nsc3/">NSC3, a situational-awareness and critical-communications platform</a>. I follow discussion about how AI is changing UX design, and was given time and resources to develop how we use it in our design and development work.</p>
+          <p>At Modirum Platforms, I work primarily as the sole designer for <a href="../nsc3/">NSC3, a situational-awareness and critical-communications platform</a>. Alongside designing new features, I wanted to make better use of AI in my design process and help kickstart development.</p>
         </div>
       </section>
       <section id="problem" class="case-section">
@@ -56,11 +53,58 @@
         <h2>Process</h2>
         <div class="section-body">
           <h3 class="section-first-heading">Starting with a delivery pilot</h3>
-          <p>My first practical pilot came during preparations for a targeted alerting customer demo. Developers wouldn’t have time to implement the required recipient-facing LiveLink, so I volunteered to build it. I directed AI to implement my designs in the product codebase and checked the behaviour locally. Our Web developer reviewed the code and made last-minute fixes before it was merged and delivered for the customer demo.</p>
+          <p>I was shaping the idea of prototyping in code during the events design work, and had discussed it with my supervisor. During preparations for a targeted alerting customer demo, an urgent need gave me an opportunity to put it into practice.</p>
+          <p>Developers wouldn’t have time to implement the recipient-facing LiveLink I had designed, so I volunteered to implement the designs myself. I directed AI to build it in the product codebase and checked the behaviour locally. Our web developer reviewed the code and made last-minute fixes before it was merged and included in the targeted alerting capability delivered for the customer demo.</p>
           <h3>Establishing a reusable approach</h3>
-          <p>I later used <a href="https://www.linkedin.com/pulse/kuka-varmistaa-asiakaskokemuksen-laadun-kun-ai-agentit-3dzlf/">Alpha Design Partners’ AI-native design maturity framework</a> to structure the next steps. I aligned Figma variables with code tokens and added repository guidance for coding agents. These shared rules support NSC3 Web development as well as prototypes.</p>
+          <p>After the pilot, I came across <a href="https://www.linkedin.com/pulse/kuka-varmistaa-asiakaskokemuksen-laadun-kun-ai-agentit-3dzlf/">Alpha Design Partners’ AI-native design maturity framework</a>. It helped me turn the initial goal into an AI design maturity initiative, with the prototyping workflow as one part.</p>
+          <p>I aligned Figma variables with code tokens and added repository guidance for coding agents. These shared rules support NSC3 web development as well as prototypes.</p>
           <p>I established a dedicated prototyping environment within the development codebase, using actual components, fictional data and simulated services.</p>
-          <p>I design the minimum UI needed for the feature in Figma, then direct AI to build an interactive code prototype. In the prototype, I add states, interactions and responsiveness, and demonstrate the flows. I apply review feedback directly to the prototype, where the team can examine the revised behaviour. Prototype code can then provide a starting point for developers to review and adapt for implementation.</p>
+          <details class="evidence-details maturity-details">
+            <summary>Planning and tracking the initiative</summary>
+            <p>I use the tracker to assess our progress and decide what to work on next.</p>
+            <figure class="maturity-tracker" aria-labelledby="maturity-tracker-title" aria-describedby="maturity-tracker-caption">
+              <header class="maturity-tracker-heading">
+                <h4 id="maturity-tracker-title">AI design maturity initiative</h4>
+                <p>NSC3 design and development workflow</p>
+              </header>
+              <section class="maturity-dimension" aria-labelledby="maturity-system">
+                <h5 id="maturity-system">Design system</h5>
+                <dl class="maturity-steps">
+                  <div class="maturity-step maturity-step--start"><dt>Starting point</dt><dd>Figma and code maintained separately.</dd></div>
+                  <div class="maturity-step maturity-step--progress"><dt>Progress</dt><dd>Figma variables published in the design-system library. Matching code tokens and coding-agent guidance merged into the development branch.</dd></div>
+                  <div class="maturity-step maturity-step--next"><dt>Next steps</dt><dd>Replace hard-coded design values in existing web components with the shared tokens.</dd></div>
+                </dl>
+              </section>
+              <section class="maturity-dimension" aria-labelledby="maturity-roles">
+                <h5 id="maturity-roles">Design roles</h5>
+                <dl class="maturity-steps">
+                  <div class="maturity-step maturity-step--start"><dt>Starting point</dt><dd>Layouts, states and prototype flows designed in Figma.</dd></div>
+                  <div class="maturity-step maturity-step--progress"><dt>Progress</dt><dd>As NSC3’s sole designer, I prototype in code and use it in design reviews.</dd></div>
+                  <div class="maturity-step maturity-step--next"><dt>Next steps</dt><dd>Host the environment so the product manager and other reviewers can use it without a development setup.</dd></div>
+                </dl>
+              </section>
+              <section class="maturity-dimension" aria-labelledby="maturity-validation">
+                <h5 id="maturity-validation">Customer understanding and validation</h5>
+                <dl class="maturity-steps">
+                  <div class="maturity-step maturity-step--start"><dt>Starting point</dt><dd>Limited validation within the workflow.</dd></div>
+                  <div class="maturity-step maturity-step--progress"><dt>Progress</dt><dd>A reusable tool built for facilitated testing of prototypes.</dd></div>
+                  <div class="maturity-step maturity-step--next"><dt>Next steps</dt><dd>Test the environment with colleagues and feature prototypes with internal domain experts.</dd></div>
+                </dl>
+              </section>
+              <section class="maturity-dimension" aria-labelledby="maturity-quality">
+                <h5 id="maturity-quality">Design quality and impact</h5>
+                <dl class="maturity-steps">
+                  <div class="maturity-step maturity-step--start"><dt>Starting point</dt><dd>Manual design and code reviews.</dd></div>
+                  <div class="maturity-step maturity-step--progress"><dt>Progress</dt><dd>Design rules documented. An advisory AI review procedure prepared and trialled.</dd></div>
+                  <div class="maturity-step maturity-step--next"><dt>Next steps</dt><dd>Use the review procedure on feature changes, add automated design-system checks, and define how to measure product quality.</dd></div>
+                </dl>
+              </section>
+              <figcaption id="maturity-tracker-caption">Portfolio summary adapted from my initiative tracker, based on <a href="https://www.linkedin.com/pulse/kuka-varmistaa-asiakaskokemuksen-laadun-kun-ai-agentit-3dzlf/">Alpha Design Partners’ AI-native design maturity framework</a>.</figcaption>
+            </figure>
+            <p>I also adapted the framework to how our team works. I removed a proposed requirement for separate designer approval of routine UI changes. I trust our developers to implement the designs we have reviewed, and we discuss changes when the designs leave something open.</p>
+          </details>
+          <h3>How I use the workflow</h3>
+          <p>I design the minimum UI needed for the feature in Figma, then direct AI to build an interactive code prototype. There I add states, interactions and responsiveness, and demonstrate the flows. I apply design-review feedback directly to the prototype so the team can try the revised behaviour. Developers can then review and adapt the code for implementation.</p>
             <figure class="prototype-workflow" aria-labelledby="prototype-workflow-title">
               <h3 id="prototype-workflow-title"><span>Modern product development approach</span><strong>Rapid AI-native prototyping</strong></h3>
               <div class="workflow-layout" role="group" aria-label="Five phases, with iteration from review back to prototyping">
@@ -81,18 +125,18 @@
       <section id="solution" class="case-section">
         <h2>Solution</h2>
         <div class="section-body">
-          <p class="section-takeaway">The workflow in practice: Event image viewer.</p>
-          <p>Operators use the viewer to examine images associated with an Event, such as a detection requiring their attention. The design needed to support closer inspection while retaining the Event details and navigation between images.</p>
-          <p>I used Figma to establish the layout and a coded prototype to refine zooming, panning and behaviour at narrower window sizes. I completed the design and prototype on the same day, then reviewed the interaction with our Web developer.</p>
-            <figure class="case-figure case-figure--screen"><img src="../assets/images/nsc3-viewer-detail.webp" width="1200" height="675" loading="lazy" alt="Reconstructed Event image viewer zoomed into the detected person, retaining Event details and media navigation"><figcaption>Event image viewer, reconstructed with fictional data.</figcaption></figure>
+          <p class="section-takeaway">The workflow in practice: event image viewer.</p>
+          <p>I used the workflow to design an event image viewer for NSC3. Operators needed to examine images associated with an event while keeping its details and navigation between images available.</p>
+          <p>I designed the layout in Figma, then worked through zooming, panning and responsiveness in the code prototype. I completed the design and prototype on the same day, then reviewed the interaction with our web developer.</p>
+            <figure class="case-figure case-figure--screen"><img src="../assets/images/nsc3-viewer-detail.webp" width="1200" height="675" loading="lazy" alt="Reconstructed event image viewer zoomed into the detected person, retaining event details and media navigation"><figcaption>Event image viewer, reconstructed with fictional data.</figcaption></figure>
         </div>
       </section>
       <section id="impact" class="case-section">
         <h2>Impact</h2>
         <div class="section-body">
-          <p>The LiveLink pilot reached the customer POC after developer review and corrections. The subsequent prototyping environment has been used by the scrum team for design reviews, bringing working interactions into the discussion.</p>
-          <p class="prototype-result">Our Web developer used the image-viewer prototype code as a starting point for implementation, describing it as mostly usable as is.</p>
-          <p>The workflow has been used for a few features so far. It gives me a way to refine behaviour in code and provide a concrete starting point for engineering, alongside the interface layouts in Figma.</p>
+          <p>The targeted alerting capability was handed over to the customer for a two-week demo. It included the recipient-facing LiveLink I had designed and implemented with AI assistance, with developer review and fixes before delivery.</p>
+          <p>The prototyping environment has since been used for a few features and for design reviews, where we can try the states and flows using the product’s actual components.</p>
+          <p class="prototype-result">Our web developer used the image-viewer prototype code as a starting point for implementation, describing it as mostly usable as is.</p>
         </div>
       </section>
     </main>

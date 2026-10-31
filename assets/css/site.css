@@ -358,6 +358,36 @@ button:focus-visible { outline: 3px solid #1565c0; outline-offset: 4px; }
 .site-footer--compact .contact-link { justify-content:center; flex-shrink:0; width:2.75rem; height:2.75rem; border-radius:.25rem; }
 .site-footer--compact .contact-link:hover { background:var(--wash); }
 
+/* A simpler opening for the workflow case. */
+.case-study--revised .workflow-opening { margin-bottom:2.5rem; }
+.case-study--revised .workflow-opening h1 { margin:0; font-size:clamp(2.25rem,4.6vw,4.25rem); line-height:1.08; letter-spacing:-.05em; }
+.workflow-opening .case-contents { margin-top:1.4rem; }
+
+/* Initiative tracker: progress and planned next steps. */
+.maturity-tracker { margin:1.25rem 0; padding:1.25rem; background:var(--wash); }
+.maturity-tracker-heading { margin-bottom:1.5rem; }
+.maturity-tracker h4 { margin:0 0 .35rem; font-size:1.1rem; font-weight:700; line-height:1.4; }
+.maturity-tracker-heading p { margin:0; font-size:.85rem; line-height:1.6; }
+.maturity-dimension + .maturity-dimension { margin-top:1.5rem; }
+.maturity-tracker h5 { margin:0 0 .65rem; font-size:.9rem; line-height:1.5; font-weight:700; }
+.maturity-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.75rem; margin:0; }
+.maturity-step { padding:.7rem .75rem; border-top:3px solid #8b9294; background:#fff; }
+.maturity-step--progress { border-color:var(--accent); }
+.maturity-step--next { border-top:3px dashed #48735b; }
+.maturity-step dt { margin:0 0 .45rem; font-size:.7rem; font-weight:700; line-height:1.5; color:var(--muted); }
+.maturity-step--progress dt { color:var(--accent); }
+.maturity-step--next dt { color:#396047; }
+.maturity-step dd { margin:0; font-size:.8rem; line-height:1.6; }
+.maturity-tracker figcaption { margin-top:1.25rem; font-size:.75rem; line-height:1.6; color:var(--muted); }
+@media(max-width:700px) {
+  .maturity-tracker { padding:1rem; }
+  .maturity-steps { grid-template-columns:1fr; gap:.5rem; }
+  .maturity-step { border-top:0; border-left:3px solid #8b9294; }
+  .maturity-step--progress { border-color:var(--accent); }
+  .maturity-step--next { border-left:3px dashed #48735b; }
+  .maturity-step dt { margin-bottom:.2rem; }
+  .maturity-step dd { font-size:.9rem; }
+}
 /* Related workflow case and the shared navigation. */
 .nav-link[aria-current="page"] { text-decoration:underline; text-underline-offset:.3em; }
 .case-opening .related-case { margin:.8rem 0 0; font-size:.9rem; line-height:1.6; color:var(--muted); }
