@@ -5,6 +5,7 @@
     <meta name="description" content="Designing Locust Swarm from discovery through productization: mission workflows, field-informed interaction design and building a design function.">
     <title>Locust Swarm — Pietari Pakarinen</title><link rel="stylesheet" href="../assets/css/site.css?v=20261031-1">
     <link rel="stylesheet" href="../assets/css/layout-preview.css?v=20261101-10">
+    <link rel="stylesheet" href="../assets/css/locust-evidence.css?v=20261101-1">
     <script src="../assets/js/case-navigation.js?v=20261101-8" defer></script>
     <script src="../assets/js/image-viewer.js?v=20261028-3" defer></script>
     <link rel="canonical" href="https://pietarip.github.io/portfolio/locust-swarm/">
@@ -60,7 +61,7 @@
           <p>I studied the requirements and their underlying research, followed industry developments, researched competing solutions and learned from senior domain experts on the team. This informed the <strong>core mission-planning flow</strong> I defined. I delivered Figma designs and components incrementally, working through feasibility and performance constraints with developers as they implemented the product.</p>
           <p>As the work expanded, I <strong>recruited and onboarded another designer</strong>. Together we built the design system, addressed design debt and worked to get designs ahead of development. AI was already widely used in engineering; we also explored AI-assisted design, for example using Figma Make to accelerate design exploration.</p>
           <p>Field testing and international demonstrations brought me closer to operators and engineers using the system. I learned to operate UAVs as a safety pilot and used what I observed in the field to inform interface changes.</p>
-          <aside class="design-decision" aria-label="A design decision"><p class="decision-label">One decision in detail</p><p>I wanted to keep the live mission view uncluttered. Field testing showed that connection and status troubleshooting still needed to happen there. I added <strong>a compact, curated log in the live view</strong>, with access to deeper technical logs outside it.</p></aside>
+
         </div>
       </section>
       <section id="solution" class="case-section"><h2>Solution</h2>
@@ -69,8 +70,13 @@
           <p>We developed a map-based interface for resource management, mission planning and execution. It brought autonomous fleet operations into a single operator’s workflow, with situational awareness and human intervention central to the design.</p>
           <p>I structured mission planning as a five-step flow within the main interface. Operators could move between steps to review and revise their choices.</p>
           <figure class="case-figure case-figure--screen"><img src="../assets/images/locust-planning-portfolio.webp" alt="Locust Swarm planning interface with a five-step progress indicator, resource selection panels and a map" width="1920" height="1224" loading="lazy"><figcaption>Reconstructed example of resource selection in the productized 1.0 design, with fictional geography and example labels.</figcaption></figure>
-          <figure class="case-figure case-figure--screen"><img src="../assets/images/locust-live-portfolio.webp" alt="Locust Swarm live interface with summary and event log beside the map, and a timeline below" width="1576" height="1124" loading="lazy"><figcaption>Reconstructed example of the live view in the productized 1.0 design: summary and event log beside the map, with the execution timeline below. Geography and example labels are fictional.</figcaption></figure>
-          <p>The compact log keeps routine status information in view while providing a route to deeper technical logs. It is one example of how field experience shaped the product’s interaction design.</p>
+          <h3>Learning from field use</h3>
+          <p>During field testing, we needed to identify which UAVs were having trouble and what kind of trouble they were having. The event log and detail panel made this information available within the live view.</p>
+          <figure class="case-figure case-figure--screen"><img src="../assets/images/locust-live-inspection.webp" alt="Locust Swarm live view with an event selected in the log on the left and its details open to the right of the map" width="1920" height="1124" loading="lazy"><figcaption>Inspecting an event within the live view. Reconstructed example with fictional geography and sample data.</figcaption></figure>
+          <div class="field-evidence">
+            <p>For a launch failure, for example, the detail panel identified the affected UAVs. This helped us see which aircraft needed attention during field testing.</p>
+            <figure class="case-figure case-figure--screen"><img src="../assets/images/locust-launch-failure.webp" alt="Launch-failure event detail listing two affected UAVs and the time of the event" width="690" height="694" loading="lazy"><figcaption>Launch-failure detail, reconstructed with fictional identifiers.</figcaption></figure>
+          </div>
           <figure class="case-figure"><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/HYUrnVApU2I?rel=0" title="Locust Swarm public product demonstration — Modirum Gespi" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Public product demonstration. <a href="https://www.youtube.com/watch?v=HYUrnVApU2I" target="_blank" rel="noreferrer">Watch on YouTube</a>.</figcaption></figure>
         </div>
       </section>

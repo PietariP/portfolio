@@ -1,0 +1,15 @@
+/* Keep the field example readable without another full-screen image. */
+.field-evidence {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin-block: 1.5rem 2rem;
+}
+.field-evidence p { margin: 0; }
+.field-evidence .case-figure { margin: 0; width: 100%; }
+.field-evidence .case-figure img { width: 100%; height: auto; }
+@media (max-width: 600px) {
+  .field-evidence { grid-template-columns: 1fr; }
+  .field-evidence .case-figure { max-width: 345px; justify-self: center; }
+}
